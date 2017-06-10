@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"lib": [
+			"dom",
+			"es2015"
+		],
+		"module": "es2015",
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"declaration": true,
+		"sourceMap": true,
+		"outDir": "dist",
+		"strict": true
+	},
+	"files": [
+		"./src/index.ts"
+	]
+}

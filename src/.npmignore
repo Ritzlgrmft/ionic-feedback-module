@@ -1,0 +1,3 @@
+.npmignore
+*.scss
+*.spec.ts

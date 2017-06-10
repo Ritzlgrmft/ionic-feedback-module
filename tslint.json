@@ -1,0 +1,55 @@
+{
+	"rulesDirectory": [
+		"node_modules/codelyzer"
+	],
+	"extends": "tslint:latest",
+	"rules": {
+		"indent": [
+			true,
+			"tabs"
+		],
+		"interface-name": [
+			true,
+			"never-prefix"
+		],
+		"whitespace": [
+			true,
+			"check-branch",
+			"check-decl",
+			"check-operator",
+			"check-separator",
+			"check-type"
+		],
+		"directive-selector": [
+			true,
+			"attribute",
+			"ionic",
+			"camelCase"
+		],
+		"component-selector": [
+			true,
+			"element",
+			"ionic",
+			"kebab-case"
+		],
+		"use-input-property-decorator": true,
+		"use-output-property-decorator": true,
+		"use-host-property-decorator": true,
+		"no-attribute-parameter-decorator": true,
+		"no-input-rename": true,
+		"no-output-rename": true,
+		"no-forward-ref": true,
+		"use-life-cycle-interface": true,
+		"use-pipe-transform-interface": true,
+		"pipe-naming": [
+			true,
+			"camelCase",
+			"sg"
+		],
+		"component-class-suffix": true,
+		"directive-class-suffix": true,
+		"templates-use-public": true,
+		"no-access-missing-member": true,
+		"invoke-injectable": true
+	}
+}

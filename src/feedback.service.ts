@@ -102,7 +102,7 @@ export class FeedbackService {
 		}
 		if (typeof configuration === "undefined") {
 			this.logger.error(methodName, "configuration missing");
-			throw new Error("FeedbackService: configuation missing");
+			throw new Error("FeedbackService: configuration missing");
 		}
 
 		// map enum values

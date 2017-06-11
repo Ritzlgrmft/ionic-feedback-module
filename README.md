@@ -12,9 +12,9 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/ritzlgrmft/ionic-feedback-module/badge.svg)](https://snyk.io/test/github/ritzlgrmft/ionic-feedback-module)
 [![License](https://img.shields.io/npm/l/ionic-feedback-module.svg)](https://www.npmjs.com/package/ionic-feedback-module)
 
-tbd
+The module is thought as an easy to integrate solution for sending feedback. Typically, the user shakes her device, a popup opens, the user can enter what went wrong, and finally the report is sent, including some additional information like screenshot, logs, app and device info.
 
-A sample app using these components is [ionic-feedback-sample](https://github.com/Ritzlgrmft/ionic-feedback-sample).
+A sample app using this module is [ionic-feedback-sample](https://github.com/Ritzlgrmft/ionic-feedback-sample).
 
 ## Screenshots
 
@@ -27,6 +27,15 @@ tbd
 ```bash
 npm install ionic-feedback-module --save
 ```
+
+### Cordova plugins
+
+Additionally, you will need some Cordova plugins:
+
+- [Screenshot](https://github.com/gitawego/cordova-screenshot)
+- [AppVersion](https://github.com/whiteoctober/cordova-plugin-app-version)
+- [Device](https://github.com/apache/cordova-plugin-device)
+- [Shake](https://github.com/Ritzlgrmft/cordova-plugin-shake) (a forked version of the original plugin, providing native support on iOS)
 
 ### import module
 

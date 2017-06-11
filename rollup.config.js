@@ -1,6 +1,6 @@
 export default {
 	format: 'umd',
-	moduleName: 'feedback-component',
+	moduleName: 'feedback-module',
 	external: [
 		'@angular/core',
 		'@angular/common',

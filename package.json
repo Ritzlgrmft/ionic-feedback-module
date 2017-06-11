@@ -1,12 +1,12 @@
 {
-	"name": "ionic-feedback-component",
+	"name": "ionic-feedback-module",
 	"version": "0.0.0-development",
 	"description": "Component for collecting user's feedback",
 	"author": {
 		"name": "Markus Wagner",
 		"email": "markus.wagner02@web.de"
 	},
-	"repository": "https://github.com/Ritzlgrmft/ionic-feedback-component.git",
+	"repository": "https://github.com/Ritzlgrmft/ionic-feedback-module.git",
 	"license": "MIT",
 	"private": false,
 	"keywords": [

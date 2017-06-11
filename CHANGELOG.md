@@ -1,3 +1,3 @@
 # Changelog
 
-see [GitHub Releases](https://github.com/Ritzlgrmft/ionic-feedback-component/releases)
+see [GitHub Releases](https://github.com/Ritzlgrmft/ionic-feedback-module/releases)

@@ -1,7 +1,7 @@
 {
 	"name": "ionic-feedback-module",
 	"version": "0.0.0-development",
-	"description": "Component for collecting user's feedback",
+	"description": "Component for collecting user's feedback in an app built with Ionic",
 	"author": {
 		"name": "Markus Wagner",
 		"email": "markus.wagner02@web.de"

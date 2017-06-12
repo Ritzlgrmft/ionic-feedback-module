@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-import { Device } from "@ionic-native/Device";
+import { Device } from "@ionic-native/device";
 import { AlertController, LoadingController, NavParams, ViewController } from "ionic-angular";
 
 import moment from "moment";

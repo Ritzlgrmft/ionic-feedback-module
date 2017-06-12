@@ -54,7 +54,7 @@
 		"cordova-plugin-app-version": "^0.1.9",
 		"cordova-plugin-console": "^1.0.7",
 		"cordova-plugin-device": "^1.1.6",
-		"cordova-plugin-shake": "git+https://github.com/Ritzlgrmft/cordova-plugin-shake.git",
+		"cordova-plugin-shake": "^0.6.0",
 		"cordova-plugin-splashscreen": "^4.0.3",
 		"moment": "^2.0.0"
 	},

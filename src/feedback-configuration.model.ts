@@ -5,6 +5,8 @@ export interface FeedbackConfiguration {
 
 	isEnabled: boolean;
 
+	appKey: string;
+	appSecret: string;
 	url: string;
 
 	language: string;

@@ -66,7 +66,7 @@ export class FeedbackService {
 		const headers = new Headers();
 		headers.append("Accept", "application/json");
 		headers.append("Authorization",
-			"Basic " + btoa("94f4e317-a8ef-4ece-92ff-9e0d9398b5eb" + ":" + "307726c0-f677-4918-beb5-01ca6fce80ea"));
+			"Basic " + btoa(this.configuration.appKey + ":" + this.configuration.appSecret));
 		headers.append("Content-Type", "application/json");
 		const body = {
 			appInfo,

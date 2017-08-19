@@ -148,9 +148,6 @@ Be sure to register first for the event before calling this method.
 
 ### FeedbackViewerModalManager
 
-
-
-
 ### openModal(language: string, translation: FeedbackViewerTranslation, categories: string[], name: string, email: string, attachScreenshot: AttachmentState, attachDeviceInfo: AttachmentState, attachAppInfo: AttachmentState, attachLogMessages: AttachmentState): Promise&lt;void>
 
 Opens the modal.

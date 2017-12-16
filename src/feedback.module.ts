@@ -1,3 +1,4 @@
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { IonicModule } from "ionic-angular";
 
@@ -13,6 +14,7 @@ import { FeedbackService } from "./feedback.service";
 		FeedbackViewerModalComponent,
 	],
 	imports: [
+		HttpClientModule,
 		IonicModule,
 	],
 	providers: [

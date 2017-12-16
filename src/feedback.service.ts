@@ -1,5 +1,7 @@
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { EventEmitter, Injectable } from "@angular/core";
-import { Headers, Http } from "@angular/http";
+
+// import { toPromise } from "rxjs/operators";
 
 import { Device } from "@ionic-native/device";
 import { Shake } from "@ionic-native/shake";
@@ -23,7 +25,7 @@ export class FeedbackService {
 	private logger: Logger;
 
 	constructor(
-		private http: Http,
+		private httpClient: HttpClient,
 		private platform: Platform,
 		private shake: Shake,
 		private configurationService: ConfigurationService,
@@ -63,11 +65,10 @@ export class FeedbackService {
 		const methodName = "sendFeedback";
 		this.logger.entry(methodName);
 
-		const headers = new Headers();
-		headers.append("Accept", "application/json");
-		headers.append("Authorization",
-			"Basic " + btoa(this.configuration.appKey + ":" + this.configuration.appSecret));
-		headers.append("Content-Type", "application/json");
+		const headers = new HttpHeaders()
+			.append("Accept", "application/json")
+			.append("Authorization", "Basic " + btoa(this.configuration.appKey + ":" + this.configuration.appSecret))
+			.append("Content-Type", "application/json");
 		const body = {
 			appInfo,
 			category,
@@ -82,7 +83,7 @@ export class FeedbackService {
 
 		try {
 			this.logger.debug(methodName, `before POST ${this.configuration.url}`, body);
-			await this.http.post(this.configuration.url, JSON.stringify(body),
+			await this.httpClient.post<void>(this.configuration.url, JSON.stringify(body),
 				{ headers, withCredentials: true }).toPromise();
 			this.logger.debug(methodName, `after POST ${this.configuration.url}`);
 		} catch (e) {

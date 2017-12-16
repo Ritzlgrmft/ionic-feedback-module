@@ -20,6 +20,15 @@
 			"check-separator",
 			"check-type"
 		],
+		"import-blacklist": [
+			true,
+			"rxjs"
+		],
+		"no-submodule-imports": [
+			true,
+			"@angular/common",
+			"rxjs"
+		],
 		"directive-selector": [
 			true,
 			"attribute",

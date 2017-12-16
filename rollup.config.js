@@ -4,7 +4,7 @@ export default {
 	external: [
 		'@angular/core',
 		'@angular/common',
-		'@angular/http',
+		'@angular/common/http',
 		'@ionic-native/app-version',
 		'@ionic-native/device',
 		'@ionic-native/screenshot',

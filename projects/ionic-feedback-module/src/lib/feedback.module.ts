@@ -1,24 +1,27 @@
+import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
-import { IonicModule } from "ionic-angular";
+import { FormsModule } from "@angular/forms";
 
-import { FeedbackViewerModalComponent } from "./feedback-viewer-modal.component";
-import { FeedbackViewerModalManager } from "./feedback-viewer-modal.manager";
+import { IonicModule } from "@ionic/angular";
+
+import { FeedbackViewerModalComponent } from "./feedback-viewer-modal/feedback-viewer-modal.component";
 import { FeedbackService } from "./feedback.service";
 
 @NgModule({
 	declarations: [
 		FeedbackViewerModalComponent,
 	],
-	entryComponents: [
-		FeedbackViewerModalComponent,
-	],
 	imports: [
+		CommonModule,
+		FormsModule,
 		HttpClientModule,
 		IonicModule,
 	],
+	exports: [
+		FeedbackViewerModalComponent,
+	],
 	providers: [
-		FeedbackViewerModalManager,
 		FeedbackService,
 	],
 })

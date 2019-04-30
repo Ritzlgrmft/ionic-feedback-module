@@ -1,56 +1,59 @@
 {
+	"extends": "tslint:recommended",
 	"rulesDirectory": [
 		"node_modules/codelyzer"
 	],
-	"extends": "tslint:latest",
 	"rules": {
-		"indent": [
+		// modifications to tslint:recommended
+		"deprecation": {
+			"severity": "warn"
+		},
+		"indent": {
+			"options": "tabs"
+		},
+		"interface-name": {
+			"options": "never-prefix"
+		},
+		"max-line-length": {
+			"options": 140
+		},
+		"member-access": false,
+		"no-non-null-assertion": true,
+		"no-string-literal": false,
+		"no-switch-case-fall-through": true,
+		"no-use-before-declare": true,
+		"object-literal-sort-keys": false,
+		// codelyzer
+		"component-selector": [
 			true,
-			"tabs"
-		],
-		"interface-name": [
-			true,
-			"never-prefix"
-		],
-		"whitespace": [
-			true,
-			"check-branch",
-			"check-decl",
-			"check-operator",
-			"check-separator",
-			"check-type"
-		],
-		"import-blacklist": [
-			true,
-			"rxjs"
-		],
-		"no-submodule-imports": [
-			true,
-			"@angular/common",
-			"rxjs"
+			"element",
+			"app",
+			"page",
+			"kebab-case"
 		],
 		"directive-selector": [
 			true,
 			"attribute",
-			"ionic",
+			"app",
 			"camelCase"
 		],
-		"component-selector": [
-			true,
-			"element",
-			"ionic",
-			"kebab-case"
-		],
-		"use-input-property-decorator": true,
-		"use-output-property-decorator": true,
-		"use-host-property-decorator": true,
-		"no-attribute-parameter-decorator": true,
+		"component-max-inline-declarations": true,
+		"no-host-metadata-property": true,
 		"no-input-rename": true,
+		"no-inputs-metadata-property": true,
+		"no-output-on-prefix": true,
 		"no-output-rename": true,
-		"no-forward-ref": true,
-		"use-life-cycle-interface": true,
-		"use-pipe-transform-interface": true,
-		"component-class-suffix": true,
-		"directive-class-suffix": true
+		"no-outputs-metadata-property": true,
+		"no-queries-metadata-property": true,
+		"prefer-inline-decorator": true,
+		"use-lifecycle-interface": true,
+		"component-class-suffix": [
+			true,
+			"Component"
+		],
+		"directive-class-suffix": [
+			true,
+			"Directive"
+		]
 	}
 }

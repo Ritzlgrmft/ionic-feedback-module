@@ -1,13 +1,10 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { EventEmitter, Injectable } from "@angular/core";
 
-// import { toPromise } from "rxjs/operators";
+import { Device } from "@ionic-native/device/ngx";
+import { Shake } from "@ionic-native/shake/ngx";
+import { Platform } from "@ionic/angular";
 
-import { Device } from "@ionic-native/device";
-import { Shake } from "@ionic-native/shake";
-import { Platform } from "ionic-angular";
-
-import { ConfigurationService } from "ionic-configuration-service";
 import { Logger, LoggingService, LogMessage } from "ionic-logging-service";
 
 import { AppInfo } from "./app-info.model";
@@ -28,14 +25,12 @@ export class FeedbackService {
 		private httpClient: HttpClient,
 		private platform: Platform,
 		private shake: Shake,
-		private configurationService: ConfigurationService,
 		loggingService: LoggingService) {
 
 		this.logger = loggingService.getLogger("Ionic.Feedback.Service");
 		const methodName = "ctor";
 		this.logger.entry(methodName);
 
-		this.configure();
 		this.shaken = new EventEmitter<void>();
 
 		this.logger.exit(methodName);
@@ -94,13 +89,14 @@ export class FeedbackService {
 		this.logger.exit(methodName);
 	}
 
-	private configure(configuration?: FeedbackConfiguration): void {
+	/**
+	 * Configures the logging depending on the given configuration.
+	 * @param configuration configuration data.
+	 */
+	public configure(configuration: FeedbackConfiguration): void {
 		const methodName = "configure";
 		this.logger.entry(methodName, configuration);
 
-		if (typeof configuration === "undefined") {
-			configuration = this.configurationService.getValue<FeedbackConfiguration>("feedback");
-		}
 		if (typeof configuration === "undefined") {
 			this.logger.error(methodName, "configuration missing");
 			throw new Error("FeedbackService: configuration missing");

@@ -1,6 +1,7 @@
 import { AttachmentState } from "./attachment-state.model";
 import { FeedbackViewerTranslation } from "./feedback-viewer-translation.model";
 
+// tslint:disable-next-line: interface-name
 export interface FeedbackConfiguration {
 
 	isEnabled: boolean;

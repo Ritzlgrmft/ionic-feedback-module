@@ -28,7 +28,6 @@
 			true,
 			"element",
 			"app",
-			"page",
 			"kebab-case"
 		],
 		"directive-selector": [

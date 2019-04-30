@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-toolbar color="medium">
+		<ion-title>
+			Ionic Feedback Module App
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<div text-center class="shake-me">Shake does not work in browser</div>
+
+	<ion-button expand="block" (click)="openFeedback()">
+		<ion-icon slot="start" name="outlet"></ion-icon>
+		Feedback
+	</ion-button>
+
+	<ion-button expand="block" (click)="openSettings()">
+		<ion-icon slot="start" name="settings"></ion-icon>
+		Settings
+	</ion-button>
+
+</ion-content>

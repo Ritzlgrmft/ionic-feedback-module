@@ -1,0 +1,7 @@
+{
+	"name": "ionic-feedback-module",
+	"integrations": {
+		"cordova": {}
+	},
+	"type": "angular"
+}

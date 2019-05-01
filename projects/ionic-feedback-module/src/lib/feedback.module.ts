@@ -5,8 +5,8 @@ import { FormsModule } from "@angular/forms";
 
 import { IonicModule } from "@ionic/angular";
 
+import { FeedbackViewerModalService } from "./feedback-viewer-modal.service";
 import { FeedbackViewerModalComponent } from "./feedback-viewer-modal/feedback-viewer-modal.component";
-import { FeedbackService } from "./feedback.service";
 
 @NgModule({
 	declarations: [
@@ -18,11 +18,14 @@ import { FeedbackService } from "./feedback.service";
 		HttpClientModule,
 		IonicModule,
 	],
+	entryComponents: [
+		FeedbackViewerModalComponent,
+	],
 	exports: [
 		FeedbackViewerModalComponent,
 	],
 	providers: [
-		FeedbackService,
+		FeedbackViewerModalService,
 	],
 })
 export class FeedbackModule { }

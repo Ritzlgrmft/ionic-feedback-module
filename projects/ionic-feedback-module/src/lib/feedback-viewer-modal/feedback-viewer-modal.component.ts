@@ -1,7 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Injector, OnInit } from "@angular/core";
 
 import { Device } from "@ionic-native/device/ngx";
-import { AlertController, LoadingController, ModalController, NavParams } from "@ionic/angular";
+import { AlertController, LoadingController, ModalController, NavParams, Platform } from "@ionic/angular";
 
 import * as moment_ from "moment";
 const moment = moment_;
@@ -40,6 +40,11 @@ export class FeedbackViewerModalComponent implements OnInit {
 	public includeLogMessages: boolean;
 	public logMessages: LogMessage[];
 
+	/**
+	 * Flag controlling which close button will be shown.
+	 */
+	public isAndroid: boolean;
+
 	public get sendDisabled(): boolean {
 		return typeof this.message === "undefined" || this.message.length === 0;
 	}
@@ -61,12 +66,14 @@ export class FeedbackViewerModalComponent implements OnInit {
 	private translations: { [language: string]: FeedbackViewerTranslation; };
 
 	constructor(
+		private injector: Injector, // !?!
 		navParams: NavParams,
+		platform: Platform,
 		private alertController: AlertController,
 		private loadingController: LoadingController,
 		private modalController: ModalController,
 		loggingService: LoggingService,
-		private feedbackService: FeedbackService) {
+	) {
 
 		this.logger = loggingService.getLogger("Ionic.Feedback.Viewer.Modal.Component");
 		const methodName = "ctor";
@@ -106,6 +113,8 @@ export class FeedbackViewerModalComponent implements OnInit {
 
 		this.language = navParams.get("language");
 		this.translation = navParams.get("translation");
+
+		this.isAndroid = platform.is("android");
 
 		this.logger.exit(methodName);
 	}
@@ -211,7 +220,8 @@ export class FeedbackViewerModalComponent implements OnInit {
 		try {
 			await loading.present();
 
-			await this.feedbackService.sendFeedback(
+			const feedbackService = this.injector.get(FeedbackService);
+			await feedbackService.sendFeedback(
 				this.timestamp,
 				this.category,
 				this.message,

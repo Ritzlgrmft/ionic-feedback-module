@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 
 import { ModalController } from "@ionic/angular";
 
+import { FeedbackViewerModalService } from "ionic-feedback-module";
 import { Logger, LoggingService } from "ionic-logging-service";
 
 @Component({
@@ -16,6 +17,7 @@ export class HomePage {
 	constructor(
 		private modalController: ModalController,
 		loggingService: LoggingService,
+		private feedbackViewerModalService: FeedbackViewerModalService,
 	) {
 
 		this.logger = loggingService.getLogger("Ionic.Feedback.Module.App.HomePage");
@@ -32,7 +34,7 @@ export class HomePage {
 		const methodName = "openFeedback";
 		this.logger.entry(methodName);
 
-		// await this.feedbackViewerModalManager.openModal();
+		await this.feedbackViewerModalService.openModal();
 
 		this.logger.exit(methodName);
 	}

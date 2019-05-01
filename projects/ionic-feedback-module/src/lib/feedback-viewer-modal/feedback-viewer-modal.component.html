@@ -1,18 +1,18 @@
 <ion-header>
 	<ion-toolbar color="primary">
 		<ion-title>{{ getTranslation().title }}</ion-title>
-		<ion-buttons start>
-			<button ion-button hideWhen="android,windows" (click)="onClose()">
+		<ion-buttons slot="start">
+			<ion-button *ngIf="!isAndroid" (click)="onClose()">
 				{{ getTranslation().cancel }}
-			</button>
-			<button ion-button icon-only showWhen="android,windows" (click)="onClose()">
+			</ion-button>
+			<ion-button *ngIf="isAndroid" icon-only (click)="onClose()">
 				<ion-icon name="md-close"></ion-icon>
-			</button>
+			</ion-button>
 		</ion-buttons>
-		<ion-buttons end>
-			<button ion-button (click)="onSend()" [disabled]="sendDisabled">
+		<ion-buttons slot="end">
+			<ion-button (click)="onSend()" [disabled]="sendDisabled">
 				{{ getTranslation().send }}
-			</button>
+			</ion-button>
 		</ion-buttons>
 	</ion-toolbar>
 </ion-header>
@@ -125,17 +125,19 @@
 		<ion-card-header>
 			<ion-item>
 				<ion-label>{{ getTranslation().includeLogMessages }}</ion-label>
-				<ion-checkbox [(ngModel)]="includeLogMessages"></ion-checkbox>
+				<ion-checkbox slot="end" [(ngModel)]="includeLogMessages"></ion-checkbox>
 			</ion-item>
 		</ion-card-header>
 		<ion-list *ngIf="includeLogMessages">
 			<ion-item *ngFor="let logMessage of logMessages">
-				<p>{{logMessage.timeStamp | date: 'dd.MM.yyyy HH:mm:ss'}} {{logMessage.level}}</p>
-				<p>{{logMessage.logger}}</p>
-				<p>
-					{{logMessage.methodName}}
-					<span *ngFor="let messagePart of logMessage.message">{{messagePart}} </span>
-				</p>
+				<ion-label text-wrap>
+					<p>{{logMessage.timeStamp | date: 'dd.MM.yyyy HH:mm:ss'}} {{logMessage.level}}</p>
+					<p>{{logMessage.logger}}</p>
+					<p>
+						{{logMessage.methodName}}
+						<span *ngFor="let messagePart of logMessage.message">{{messagePart}} </span>
+					</p>
+				</ion-label>
 			</ion-item>
 		</ion-list>
 	</ion-card>

@@ -3,7 +3,7 @@ import { EventEmitter, Injectable } from "@angular/core";
 
 import { Device } from "@ionic-native/device/ngx";
 import { Shake } from "@ionic-native/shake/ngx";
-import { Platform } from "@ionic/angular";
+import { ModalController, Platform } from "@ionic/angular";
 
 import { Logger, LoggingService, LogMessage } from "ionic-logging-service";
 
@@ -12,7 +12,9 @@ import { AttachmentState } from "./attachment-state.model";
 import { FeedbackConfiguration } from "./feedback-configuration.model";
 import { FeedbackContact } from "./feedback-contact.model";
 
-@Injectable()
+@Injectable({
+	providedIn: "root",
+})
 export class FeedbackService {
 
 	public shaken: EventEmitter<void>;
@@ -24,8 +26,10 @@ export class FeedbackService {
 	constructor(
 		private httpClient: HttpClient,
 		private platform: Platform,
+		private modalController: ModalController,
 		private shake: Shake,
-		loggingService: LoggingService) {
+		loggingService: LoggingService,
+	) {
 
 		this.logger = loggingService.getLogger("Ionic.Feedback.Service");
 		const methodName = "ctor";
@@ -90,7 +94,7 @@ export class FeedbackService {
 	}
 
 	/**
-	 * Configures the logging depending on the given configuration.
+	 * Configures the feedback depending on the given configuration.
 	 * @param configuration configuration data.
 	 */
 	public configure(configuration: FeedbackConfiguration): void {

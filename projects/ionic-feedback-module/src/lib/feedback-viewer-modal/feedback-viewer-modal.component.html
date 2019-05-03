@@ -103,20 +103,20 @@
 		</ion-card-header>
 		<ion-list *ngIf="includeAppInfo">
 			<ion-item>
-				<div item-left>{{ getTranslation().appName }}</div>
-				<div item-right text-right>{{appInfo.appName}}</div>
+				<ion-label slot="start">{{ getTranslation().appName }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{appInfo.appName}}</div>
 			</ion-item>
 			<ion-item>
-				<div item-left>{{ getTranslation().packageName }}</div>
-				<div item-right text-right>{{appInfo.packageName}}</div>
+				<ion-label slot="start">{{ getTranslation().packageName }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{appInfo.packageName}}</div>
 			</ion-item>
 			<ion-item>
-				<div item-left>{{ getTranslation().versionCode }}</div>
-				<div item-right text-right>{{appInfo.versionCode}}</div>
+				<ion-label slot="start">{{ getTranslation().versionCode }}</ion-label>
+				<div slot="end">{{appInfo.versionCode}}</div>
 			</ion-item>
 			<ion-item>
-				<div item-left>{{ getTranslation().versionNumber }}</div>
-				<div item-right text-right>{{appInfo.versionNumber}}</div>
+				<ion-label slot="start">{{ getTranslation().versionNumber }}</ion-label>
+				<div slot="end">{{appInfo.versionNumber}}</div>
 			</ion-item>
 		</ion-list>
 	</ion-card>
@@ -131,12 +131,12 @@
 		<ion-list *ngIf="includeLogMessages">
 			<ion-item *ngFor="let logMessage of logMessages">
 				<ion-label text-wrap>
-					<p>{{logMessage.timeStamp | date: 'dd.MM.yyyy HH:mm:ss'}} {{logMessage.level}}</p>
-					<p>{{logMessage.logger}}</p>
-					<p>
+					<div>{{logMessage.timeStamp | date: 'dd.MM.yyyy HH:mm:ss'}} {{logMessage.level}}</div>
+					<div>{{logMessage.logger}}</div>
+					<div>
 						{{logMessage.methodName}}
 						<span *ngFor="let messagePart of logMessage.message">{{messagePart}} </span>
-					</p>
+					</div>
 				</ion-label>
 			</ion-item>
 		</ion-list>

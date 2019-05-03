@@ -5,3 +5,7 @@ ion-select {
 ion-card-header {
     padding: 0;
 }
+
+.break-all {
+    word-break: break-all;
+}

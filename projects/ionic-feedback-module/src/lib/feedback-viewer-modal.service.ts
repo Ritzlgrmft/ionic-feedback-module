@@ -164,15 +164,15 @@ export class FeedbackViewerModalService {
 			// retrieve app info
 			let appInfo: AppInfo | undefined;
 			if (attachAppInfo === AttachmentState.Ask || attachAppInfo === AttachmentState.Yes) {
-				if (this.platform.is("cordova")) {
+				try {
 					appInfo = {
 						appName: await this.appVersion.getAppName(),
 						packageName: await this.appVersion.getPackageName(),
-						versionCode: await this.appVersion.getVersionCode().toString(),
+						versionCode: (await this.appVersion.getVersionCode()).toString(),
 						versionNumber: await this.appVersion.getVersionNumber(),
 					};
-				} else {
-					this.logger.debug(methodName, "no app info available since not running on device");
+				} catch (e) {
+					this.logger.debug(methodName, "no app info available", e);
 					attachAppInfo = AttachmentState.No;
 				}
 			}

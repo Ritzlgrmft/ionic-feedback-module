@@ -22,7 +22,7 @@ export class AppComponent {
 		feedbackService: FeedbackService,
 		private feedbackViewerModalService: FeedbackViewerModalService) {
 
-		this.logger = loggingService.getLogger("Ionic.Feedback.Module.App.HomePage");
+		this.logger = loggingService.getLogger("Ionic.Feedback.Module.App");
 		const methodName = "ctor";
 		this.logger.entry(methodName);
 

@@ -24,6 +24,14 @@ export const environment = {
 		attachAppInfo: "Ask",
 		attachLogMessages: "Ask",
 	},
+	mocks: {
+		appVersion: {
+			appName: "Ionic Feedback Module App",
+			packageName: "Ionic.Feedback.Module.App",
+			versionCode: 10203,
+			versionNumber: "1.2.3",
+		},
+	},
 };
 
 import "zone.js/dist/zone-error";  // Included with Angular CLI.

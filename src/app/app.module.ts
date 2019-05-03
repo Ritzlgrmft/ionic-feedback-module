@@ -14,6 +14,7 @@ import { LoggingService, LoggingServiceModule } from "ionic-logging-service";
 import { environment } from "src/environments/environment";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { AppVersionMock } from "./mocks/app-version.mock";
 
 export function configureLogging(loggingService: LoggingService): () => void {
 	return () => loggingService.configure(environment.logging);
@@ -43,7 +44,7 @@ export function configureLogging(loggingService: LoggingService): () => void {
 			provide: APP_INITIALIZER,
 			useFactory: configureLogging,
 		},
-		AppVersion,
+		{ provide: AppVersion, useClass: AppVersionMock },
 		Device,
 		Screenshot,
 		Shake,

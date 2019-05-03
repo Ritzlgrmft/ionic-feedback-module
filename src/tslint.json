@@ -1,12 +1,10 @@
 {
 	"extends": "../tslint.json",
 	"rules": {
-		"component-selector": [
+		"component-class-suffix": [
 			true,
-			"element",
-			"app",
-			"page",
-			"kebab-case"
+			"Component",
+			"Page"
 		]
 	}
 }

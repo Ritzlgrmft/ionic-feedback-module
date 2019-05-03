@@ -60,36 +60,36 @@
 		</ion-card-header>
 		<ion-list *ngIf="includeDeviceInfo">
 			<ion-item>
-				<div item-left>{{ getTranslation().manufacturer }}</div>
-				<div item-right text-right>{{deviceInfo.manufacturer}}</div>
+				<ion-label slot="start">{{ getTranslation().manufacturer }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.manufacturer}}</div>
 			</ion-item>
 			<ion-item>
-				<div item-left>{{ getTranslation().model }}</div>
-				<div item-right text-right>{{deviceInfo.model}}</div>
+				<ion-label slot="start">{{ getTranslation().model }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.model}}</div>
 			</ion-item>
 			<ion-item>
-				<div item-left>{{ getTranslation().uuid }}</div>
-				<div item-right text-right>{{deviceInfo.uuid}}</div>
+				<ion-label slot="start">{{ getTranslation().uuid }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.uuid}}</div>
 			</ion-item>
 			<ion-item>
-				<div item-left>{{ getTranslation().serial }}</div>
-				<div item-right text-right>{{deviceInfo.serial}}</div>
+				<ion-label slot="start">{{ getTranslation().serial }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.serial}}</div>
 			</ion-item>
 			<ion-item>
-				<div item-left>{{ getTranslation().platform }}</div>
-				<div item-right text-right>{{deviceInfo.platform}}</div>
+				<ion-label slot="start">{{ getTranslation().platform }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.platform}}</div>
 			</ion-item>
 			<ion-item>
-				<div item-left>{{ getTranslation().version }}</div>
-				<div item-right text-right>{{deviceInfo.version}}</div>
+				<ion-label slot="start">{{ getTranslation().version }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.version}}</div>
 			</ion-item>
 			<ion-item>
-				<div item-left>{{ getTranslation().cordova }}</div>
-				<div item-right text-right>{{deviceInfo.cordova}}</div>
+				<ion-label slot="start">{{ getTranslation().cordova }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.cordova}}</div>
 			</ion-item>
 			<ion-item>
-				<div item-left>{{ getTranslation().isVirtual }}</div>
-				<div item-right text-right>{{deviceInfo.isVirtual}}</div>
+				<ion-label slot="start">{{ getTranslation().isVirtual }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.isVirtual}}</div>
 			</ion-item>
 		</ion-list>
 	</ion-card>

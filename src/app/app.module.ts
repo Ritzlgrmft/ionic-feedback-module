@@ -15,6 +15,7 @@ import { environment } from "src/environments/environment";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { AppVersionMock } from "./mocks/app-version.mock";
+import { DeviceMock } from "./mocks/device.mock";
 
 export function configureLogging(loggingService: LoggingService): () => void {
 	return () => loggingService.configure(environment.logging);
@@ -45,7 +46,7 @@ export function configureLogging(loggingService: LoggingService): () => void {
 			useFactory: configureLogging,
 		},
 		{ provide: AppVersion, useClass: AppVersionMock },
-		Device,
+		{ provide: Device, useClass: DeviceMock },
 		Screenshot,
 		Shake,
 	],

@@ -144,7 +144,7 @@ export class FeedbackViewerModalService {
 			// retrieve device info
 			let deviceInfo: Device | undefined;
 			if (attachDeviceInfo === AttachmentState.Ask || attachDeviceInfo === AttachmentState.Yes) {
-				if (this.platform.is("cordova")) {
+				try {
 					deviceInfo = {
 						cordova: this.device.cordova,
 						isVirtual: this.device.isVirtual,
@@ -155,8 +155,8 @@ export class FeedbackViewerModalService {
 						uuid: this.device.uuid,
 						version: this.device.version,
 					};
-				} else {
-					this.logger.debug(methodName, "no device info available since not running on device");
+				} catch (e) {
+					this.logger.debug(methodName, "no device info available", e);
 					attachDeviceInfo = AttachmentState.No;
 				}
 			}

@@ -31,6 +31,16 @@ export const environment = {
 			versionCode: 10203,
 			versionNumber: "1.2.3",
 		},
+		device: {
+			cordova: "9.0.0",
+			model: "super",
+			platform: "browser",
+			uuid: "12345678-1234-1234-1234-123456789ABC",
+			version: "42",
+			manufacturer: "Ritzlgrmft",
+			isVirtual: false,
+			serial: "abx-124",
+		},
 	},
 };
 

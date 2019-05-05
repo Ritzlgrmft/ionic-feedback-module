@@ -128,13 +128,8 @@ export class FeedbackViewerModalService {
 			let screenshot: string | undefined;
 			if (attachScreenshot === AttachmentState.Ask || attachScreenshot === AttachmentState.Yes) {
 				try {
-					if (await this.platform.ready() === "cordova") {
-						screenshot = (await this.screenshot.URI()).URI;
-						this.logger.debug(methodName, "screenshot taken");
-					} else {
-						this.logger.debug(methodName, "no screenshot taken since not running on device");
-						attachScreenshot = AttachmentState.No;
-					}
+					screenshot = (await this.screenshot.URI()).URI;
+					this.logger.debug(methodName, "screenshot taken");
 				} catch (e) {
 					this.logger.error(methodName, "could not take screenshot", e);
 					attachScreenshot = AttachmentState.No;

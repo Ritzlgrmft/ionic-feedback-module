@@ -36,6 +36,9 @@ export class FeedbackService {
 		this.logger.entry(methodName);
 
 		this.shaken = new EventEmitter<void>();
+		this.configuration = {
+			isEnabled: false,
+		};
 
 		this.logger.exit(methodName);
 	}
@@ -46,11 +49,13 @@ export class FeedbackService {
 
 		if (!this.configuration.isEnabled) {
 			this.logger.warn(methodName, "feedback is disabled");
-		} else if (await this.platform.ready() === "cordova") {
-			this.shake.startWatch().subscribe(() => this.onShaken());
-			this.logger.debug(methodName, "subscribed for shake events");
 		} else {
-			this.logger.warn(methodName, "shaking is not supported");
+			try {
+				this.shake.startWatch().subscribe(() => this.onShaken());
+				this.logger.debug(methodName, "subscribed for shake events");
+			} catch (e) {
+				this.logger.warn(methodName, "shaking is not supported", e);
+			}
 		}
 
 		this.logger.exit(methodName);

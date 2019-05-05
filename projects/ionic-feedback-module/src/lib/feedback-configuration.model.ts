@@ -5,15 +5,15 @@ export interface FeedbackConfiguration {
 
 	isEnabled: boolean;
 
-	appKey: string;
-	appSecret: string;
-	url: string;
+	appKey?: string;
+	appSecret?: string;
+	url?: string;
 
-	language: string;
+	language?: string;
 	translation?: FeedbackViewerTranslation;
-	categories: string[];
-	attachScreenshot: AttachmentState | string;
-	attachDeviceInfo: AttachmentState | string;
-	attachAppInfo: AttachmentState | string;
-	attachLogMessages: AttachmentState | string;
+	categories?: string[];
+	attachScreenshot?: AttachmentState | string;
+	attachDeviceInfo?: AttachmentState | string;
+	attachAppInfo?: AttachmentState | string;
+	attachLogMessages?: AttachmentState | string;
 }

@@ -16,6 +16,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { AppVersionMock } from "./mocks/app-version.mock";
 import { DeviceMock } from "./mocks/device.mock";
+import { ShakeMock } from "./mocks/shake.mock";
 
 export function configureLogging(loggingService: LoggingService): () => void {
 	return () => loggingService.configure(environment.logging);
@@ -48,7 +49,7 @@ export function configureLogging(loggingService: LoggingService): () => void {
 		{ provide: AppVersion, useClass: AppVersionMock },
 		{ provide: Device, useClass: DeviceMock },
 		Screenshot,
-		Shake,
+		{ provide: Shake, useClass: ShakeMock },
 	],
 	bootstrap: [
 		AppComponent,

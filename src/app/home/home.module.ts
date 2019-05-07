@@ -6,6 +6,7 @@ import { IonicModule } from "@ionic/angular";
 
 import { FeedbackModule } from "ionic-feedback-module";
 
+import { SettingsModalComponent } from "../settings/settings-modal.component";
 import { HomePage } from "./home.page";
 
 @NgModule({
@@ -23,9 +24,11 @@ import { HomePage } from "./home.page";
 	],
 	declarations: [
 		HomePage,
+		SettingsModalComponent,
 	],
 	entryComponents: [
 		HomePage,
+		SettingsModalComponent,
 	],
 })
 export class HomePageModule { }

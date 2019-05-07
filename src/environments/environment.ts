@@ -1,3 +1,5 @@
+import { AttachmentState } from "ionic-feedback-module";
+
 export const environment = {
 	production: false,
 
@@ -19,10 +21,10 @@ export const environment = {
 			"Issue",
 			"Suggestion",
 		],
-		attachScreenshot: "Ask",
-		attachDeviceInfo: "Ask",
-		attachAppInfo: "Ask",
-		attachLogMessages: "Ask",
+		attachScreenshot: AttachmentState.Ask,
+		attachDeviceInfo: AttachmentState.Ask,
+		attachAppInfo: AttachmentState.Ask,
+		attachLogMessages: AttachmentState.Ask,
 	},
 	mocks: {
 		appVersion: {
@@ -48,3 +50,4 @@ export const environment = {
 };
 
 import "zone.js/dist/zone-error";  // Included with Angular CLI.
+

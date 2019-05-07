@@ -12,8 +12,8 @@ export interface FeedbackConfiguration {
 	language?: string;
 	translation?: FeedbackViewerTranslation;
 	categories?: string[];
-	attachScreenshot?: AttachmentState | string;
-	attachDeviceInfo?: AttachmentState | string;
-	attachAppInfo?: AttachmentState | string;
-	attachLogMessages?: AttachmentState | string;
+	attachScreenshot?: AttachmentState;
+	attachDeviceInfo?: AttachmentState;
+	attachAppInfo?: AttachmentState;
+	attachLogMessages?: AttachmentState;
 }

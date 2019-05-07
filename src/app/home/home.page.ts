@@ -4,6 +4,7 @@ import { ModalController } from "@ionic/angular";
 
 import { FeedbackViewerModalService } from "ionic-feedback-module";
 import { Logger, LoggingService } from "ionic-logging-service";
+import { SettingsModalComponent } from "../settings/settings-modal.component";
 
 @Component({
 	selector: "app-home",
@@ -46,8 +47,10 @@ export class HomePage {
 		const methodName = "openSettings";
 		this.logger.entry(methodName);
 
-		// const modal = await this.modalController.create(SettingsPage);
-		// await modal.present();
+		const modal = await this.modalController.create({
+			component: SettingsModalComponent,
+		});
+		await modal.present();
 
 		this.logger.exit(methodName);
 	}

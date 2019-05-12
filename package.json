@@ -15,13 +15,16 @@
 	],
 	"scripts": {
 		"build": "ng build ionic-feedback-module && cpx 'projects/ionic-feedback-module/README.md' dist/ionic-feedback-module --verbose",
-		"test": "ng test ionic-feedback-module --code-coverage --watch false --browsers ChromeHeadless && cd projects/ionic-feedback-module && compodoc --coverageTest 100 && cd ../.. && ng lint && ng build ionic-feedback-module --prod && ng e2e",
+		"test": "npm run test-coverage && npm run test-compodoc && npm run lint && npm run test-e2e",
+		"test-coverage": "ng test ionic-feedback-module --code-coverage --watch false --browsers ChromeHeadless",
+		"test-compodoc": "cd projects/ionic-feedback-module && compodoc --coverageTest 100 && cd ../..",
+		"test-e2e": "ng e2e",
 		"test-watch": "ng test ionic-feedback-module --code-coverage",
 		"lint": "ng lint",
 		"e2e": "ng e2e",
+		"codecov": "codecov",
 		"compodoc": "cd projects/ionic-feedback-module && compodoc && cd ../..",
-		"test-and-codecov": "npm run test && codecov",
-		"build-and-release": "npm run build && semantic-release"
+		"semantic-release": "semantic-release"
 	},
 	"dependencies": {
 		"@angular/animations": "~7.2.0",

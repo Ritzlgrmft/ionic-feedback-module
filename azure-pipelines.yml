@@ -1,0 +1,98 @@
+trigger:
+- master
+
+pool:
+  name: Hosted
+  
+steps:
+- task: NodeTool@0
+  displayName: 'Use Node 11.x'
+  inputs:
+    versionSpec: 11.x
+
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    verbose: false
+
+- task: DeleteFiles@1
+  displayName: 'delete unit test results'
+  inputs:
+    SourceFolder: projects/ionic-feedback-module/junit
+    Contents: 'TESTS*.xml'
+
+- task: Npm@1
+  displayName: 'npm run test-coverage'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run test-coverage'
+
+- task: PublishTestResults@2
+  displayName: 'publish unit test results'
+  condition: succeededOrFailed()
+  inputs:
+    searchFolder: $(System.DefaultWorkingDirectory)/projects/ionic-feedback-module/junit
+    testRunTitle: Unit Tests
+    testResultsFormat: JUnit
+    testResultsFiles: "**/TESTS*.xml"
+
+- task: Npm@1
+  displayName: 'npm run codecov'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run codecov'
+
+- task: Npm@1
+  displayName: 'npm run test-compodoc'
+  condition: succeededOrFailed()
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run test-compodoc'
+
+- task: Npm@1
+  displayName: 'npm run build'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run build'
+
+- task: DeleteFiles@1
+  displayName: 'delete e2e test results'
+  inputs:
+    SourceFolder: e2e/junit
+    Contents: 'TESTS*.xml'
+
+- task: Npm@1
+  displayName: 'npm run test-e2e'
+  condition: succeededOrFailed()
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run test-e2e'
+
+- task: PublishTestResults@2
+  displayName: 'publish e2e test results'
+  condition: succeededOrFailed()
+  inputs:
+    searchFolder: $(System.DefaultWorkingDirectory)/e2e/junit
+    testRunTitle: E2E Tests
+    testResultsFormat: JUnit
+    testResultsFiles: "**/junit*.xml"
+
+- task: Npm@1
+  displayName: 'npm run lint'
+  condition: succeededOrFailed()
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run lint'
+
+- task: Npm@1
+  displayName: 'npm run semantic-release'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run semantic-release'

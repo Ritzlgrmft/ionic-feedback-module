@@ -1,5 +1,5 @@
 trigger:
-- master
+- angular7
 
 pool:
   name: Hosted

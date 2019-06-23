@@ -1,0 +1,775 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ionic-feedback-module</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ionic-feedback-module</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>FeedbackViewerModalService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/lib/feedback-viewer-modal.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#modalClosed">modalClosed</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#openModal">openModal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(platform: Platform, modalController: ModalController, appVersion: AppVersion, device: Device, screenshot: Screenshot, loggingService: LoggingService, feedbackService: <a href="../injectables/FeedbackService.html">FeedbackService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/lib/feedback-viewer-modal.service.ts:31</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>platform</td>
+                                                  
+                                                        <td>
+                                                                    <code>Platform</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalController</td>
+                                                  
+                                                        <td>
+                                                                    <code>ModalController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>appVersion</td>
+                                                  
+                                                        <td>
+                                                                    <code>AppVersion</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>device</td>
+                                                  
+                                                        <td>
+                                                                    <code>Device</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>screenshot</td>
+                                                  
+                                                        <td>
+                                                                    <code>Screenshot</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>loggingService</td>
+                                                  
+                                                        <td>
+                                                                    <code>LoggingService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>feedbackService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FeedbackService.html" target="_self" >FeedbackService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openModal"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            openModal
+                        </b>
+                        <a href="#openModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openModal(language?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, translation?: <a href="../interfaces/FeedbackViewerTranslation.html">FeedbackViewerTranslation</a>, categories?: string[], name?: string | undefined, email?: string | undefined, attachScreenshot?: <a href="../undefineds/AttachmentState.html">AttachmentState | string</a>, attachDeviceInfo?: <a href="../undefineds/AttachmentState.html">AttachmentState | string</a>, attachAppInfo?: <a href="../undefineds/AttachmentState.html">AttachmentState | string</a>, attachLogMessages?: <a href="../undefineds/AttachmentState.html">AttachmentState | string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/lib/feedback-viewer-modal.service.ts:65</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Opens the modal.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>language</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>language used for the modal. Currently the languages en and de are supported.
+If the given language is unknown or undefined, the given translation is used.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>translation</td>
+                                    <td>
+                                                <code><a href="../interfaces/FeedbackViewerTranslation.html" target="_self" >FeedbackViewerTranslation</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>translation for the labels in the modal.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>categories</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>optional categories of the feedback.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>name</td>
+                                    <td>
+                                            <code>string | undefined</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>name of the contact.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>email</td>
+                                    <td>
+                                            <code>string | undefined</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>email address.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>attachScreenshot</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#AttachmentState" target="_self" >AttachmentState | string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>if true, a shot of the current screen will be attached.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>attachDeviceInfo</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#AttachmentState" target="_self" >AttachmentState | string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>if true, the device info will be attached.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>attachAppInfo</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#AttachmentState" target="_self" >AttachmentState | string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>if true, the app info will be attached.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>attachLogMessages</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#AttachmentState" target="_self" >AttachmentState | string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>shall the last log messages be attached.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Promise which gets resolved as soon as the modal is shown.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="modalClosed"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            modalClosed</b>
+                            <a href="#modalClosed"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new EventEmitter&lt;void&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/lib/feedback-viewer-modal.service.ts:27</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event submitted when the modal gets closed.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EventEmitter, Injectable } from &quot;@angular/core&quot;;
+
+import { AppVersion } from &quot;@ionic-native/app-version/ngx&quot;;
+import { Device } from &quot;@ionic-native/device/ngx&quot;;
+import { Screenshot } from &quot;@ionic-native/screenshot/ngx&quot;;
+import { ModalController, Platform } from &quot;@ionic/angular&quot;;
+
+import { Logger, LoggingService, LogMessage } from &quot;ionic-logging-service&quot;;
+
+import { lang } from &quot;moment&quot;;
+import { AppInfo } from &quot;./app-info.model&quot;;
+import { AttachmentState } from &quot;./attachment-state.model&quot;;
+import { FeedbackConfiguration } from &quot;./feedback-configuration.model&quot;;
+import { FeedbackContact } from &quot;./feedback-contact.model&quot;;
+import { FeedbackViewerModalComponent } from &quot;./feedback-viewer-modal/feedback-viewer-modal.component&quot;;
+import { FeedbackViewerTranslation } from &quot;./feedback-viewer-translation.model&quot;;
+import { FeedbackService } from &quot;./feedback.service&quot;;
+
+@Injectable({
+	providedIn: &quot;root&quot;,
+})
+export class FeedbackViewerModalService {
+
+	/**
+	 * Event submitted when the modal gets closed.
+	 */
+	public modalClosed &#x3D; new EventEmitter&lt;void&gt;();
+
+	private logger: Logger;
+
+	private modalIsOpen: boolean;
+
+	constructor(
+		private platform: Platform,
+		private modalController: ModalController,
+		private appVersion: AppVersion,
+		private device: Device,
+		private screenshot: Screenshot,
+		private loggingService: LoggingService,
+		private feedbackService: FeedbackService) {
+
+		this.logger &#x3D; loggingService.getLogger(&quot;Ionic.Feedback.Viewer.Modal.Service&quot;);
+		const methodName &#x3D; &quot;ctor&quot;;
+		this.logger.entry(methodName);
+
+		this.modalIsOpen &#x3D; false;
+
+		this.logger.exit(methodName);
+	}
+
+	/**
+	 * Opens the modal.
+	 * @param language language used for the modal. Currently the languages en and de are supported.
+	 *                 If the given language is unknown or undefined, the given translation is used.
+	 * @param translation translation for the labels in the modal.
+	 * @param categories optional categories of the feedback.
+	 * @param name name of the contact.
+	 * @param email email address.
+	 * @param attachScreenshot if true, a shot of the current screen will be attached.
+	 * @param attachLogMessages shall the last log messages be attached.
+	 * @param attachDeviceInfo if true, the device info will be attached.
+	 * @param attachAppInfo if true, the app info will be attached.
+	 * @returns Promise which gets resolved as soon as the modal is shown.
+	 */
+	public async openModal(
+		language?: string,
+		translation?: FeedbackViewerTranslation,
+		categories?: string[],
+		name?: string | undefined,
+		email?: string | undefined,
+		attachScreenshot?: AttachmentState | string,
+		attachDeviceInfo?: AttachmentState | string,
+		attachAppInfo?: AttachmentState | string,
+		attachLogMessages?: AttachmentState | string,
+	): Promise&lt;void&gt; {
+
+		// check for default values
+		const configuration &#x3D; this.feedbackService.configuration;
+		const contact &#x3D; this.feedbackService.contact;
+		if (!language) {
+			language &#x3D; configuration.language;
+		}
+		if (!translation) {
+			translation &#x3D; configuration.translation;
+		}
+		if (!categories) {
+			categories &#x3D; configuration.categories;
+		}
+		if (!name) {
+			name &#x3D; contact.name;
+		}
+		if (!email) {
+			email &#x3D; contact.email;
+		}
+		if (!attachScreenshot) {
+			attachScreenshot &#x3D; configuration.attachScreenshot;
+		}
+		if (!attachDeviceInfo) {
+			attachDeviceInfo &#x3D; configuration.attachDeviceInfo;
+		}
+		if (!attachAppInfo) {
+			attachAppInfo &#x3D; configuration.attachAppInfo;
+		}
+		if (!attachLogMessages) {
+			attachLogMessages &#x3D; configuration.attachLogMessages;
+		}
+
+		// retrieve log messages (as soon as possible)
+		let logMessages: LogMessage[] | undefined;
+		if (attachLogMessages &#x3D;&#x3D;&#x3D; AttachmentState.Ask || attachLogMessages &#x3D;&#x3D;&#x3D; AttachmentState.Yes) {
+			// thanks to slice(), the array is cloned
+			logMessages &#x3D; this.loggingService.getLogMessages().slice(0);
+		}
+
+		const methodName &#x3D; &quot;openModal&quot;;
+		this.logger.entry(methodName, language, typeof translation &#x3D;&#x3D;&#x3D; &quot;object&quot; ? &quot;object&quot; : undefined, categories,
+			name, email, attachScreenshot, attachDeviceInfo, attachAppInfo, attachLogMessages);
+
+		if (this.modalIsOpen) {
+			this.logger.warn(methodName, &quot;modal is already open&quot;);
+			throw new Error(&quot;FeedbackViewerModalComponent is already open&quot;);
+		}
+
+		try {
+			this.modalIsOpen &#x3D; true;
+
+			// take screenshot
+			let screenshot: string | undefined;
+			if (attachScreenshot &#x3D;&#x3D;&#x3D; AttachmentState.Ask || attachScreenshot &#x3D;&#x3D;&#x3D; AttachmentState.Yes) {
+				try {
+					screenshot &#x3D; (await this.screenshot.URI()).URI;
+					this.logger.debug(methodName, &quot;screenshot taken&quot;);
+				} catch (e) {
+					this.logger.error(methodName, &quot;could not take screenshot&quot;, e);
+					attachScreenshot &#x3D; AttachmentState.No;
+				}
+			}
+
+			// retrieve device info
+			let deviceInfo: Device | undefined;
+			if (attachDeviceInfo &#x3D;&#x3D;&#x3D; AttachmentState.Ask || attachDeviceInfo &#x3D;&#x3D;&#x3D; AttachmentState.Yes) {
+				try {
+					deviceInfo &#x3D; {
+						cordova: this.device.cordova,
+						isVirtual: this.device.isVirtual,
+						manufacturer: this.device.manufacturer,
+						model: this.device.model,
+						platform: this.device.platform,
+						serial: this.device.serial,
+						uuid: this.device.uuid,
+						version: this.device.version,
+					};
+				} catch (e) {
+					this.logger.debug(methodName, &quot;no device info available&quot;, e);
+					attachDeviceInfo &#x3D; AttachmentState.No;
+				}
+			}
+
+			// retrieve app info
+			let appInfo: AppInfo | undefined;
+			if (attachAppInfo &#x3D;&#x3D;&#x3D; AttachmentState.Ask || attachAppInfo &#x3D;&#x3D;&#x3D; AttachmentState.Yes) {
+				try {
+					appInfo &#x3D; {
+						appName: await this.appVersion.getAppName(),
+						packageName: await this.appVersion.getPackageName(),
+						versionCode: (await this.appVersion.getVersionCode()).toString(),
+						versionNumber: await this.appVersion.getVersionNumber(),
+					};
+				} catch (e) {
+					this.logger.debug(methodName, &quot;no app info available&quot;, e);
+					attachAppInfo &#x3D; AttachmentState.No;
+				}
+			}
+
+			const modal &#x3D; await this.modalController.create({
+				component: FeedbackViewerModalComponent,
+				componentProps: {
+					// tslint:disable:object-literal-sort-keys
+					categories,
+					name,
+					email,
+					attachLogMessages,
+					logMessages,
+					attachDeviceInfo,
+					deviceInfo,
+					attachAppInfo,
+					appInfo,
+					attachScreenshot,
+					screenshot,
+					language,
+					translation,
+					// tslint:enable:object-literal-sort-keys
+				},
+			});
+			modal.onDidDismiss().then(() &#x3D;&gt; {
+				this.onModalClosed();
+			});
+			await modal.present();
+		} catch (e) {
+			this.logger.error(methodName, e);
+			// something went wrong, so the modal is not open
+			this.modalIsOpen &#x3D; false;
+			throw e;
+		}
+
+		this.logger.exit(methodName);
+	}
+
+	/**
+	 * Callback called when the modal is closed.
+	 */
+	private onModalClosed(): void {
+		const methodName &#x3D; &quot;onModalClosed&quot;;
+		this.logger.entry(methodName);
+
+		this.modalIsOpen &#x3D; false;
+		this.modalClosed.emit();
+
+		this.logger.exit(methodName);
+	}
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'FeedbackViewerModalService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

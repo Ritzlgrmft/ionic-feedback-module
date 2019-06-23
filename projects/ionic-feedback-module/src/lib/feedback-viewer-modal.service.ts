@@ -3,15 +3,12 @@ import { EventEmitter, Injectable } from "@angular/core";
 import { AppVersion } from "@ionic-native/app-version/ngx";
 import { Device } from "@ionic-native/device/ngx";
 import { Screenshot } from "@ionic-native/screenshot/ngx";
-import { ModalController, Platform } from "@ionic/angular";
+import { ModalController } from "@ionic/angular";
 
 import { Logger, LoggingService, LogMessage } from "ionic-logging-service";
 
-import { lang } from "moment";
 import { AppInfo } from "./app-info.model";
 import { AttachmentState } from "./attachment-state.model";
-import { FeedbackConfiguration } from "./feedback-configuration.model";
-import { FeedbackContact } from "./feedback-contact.model";
 import { FeedbackViewerModalComponent } from "./feedback-viewer-modal/feedback-viewer-modal.component";
 import { FeedbackViewerTranslation } from "./feedback-viewer-translation.model";
 import { FeedbackService } from "./feedback.service";
@@ -31,7 +28,6 @@ export class FeedbackViewerModalService {
 	private modalIsOpen: boolean;
 
 	constructor(
-		private platform: Platform,
 		private modalController: ModalController,
 		private appVersion: AppVersion,
 		private device: Device,

@@ -74,6 +74,7 @@
 		"ng-packagr": "^4.2.0",
 		"protractor": "5.4.2",
 		"puppeteer": "1.15.0",
+		"semantic-release": "15.13.16",
 		"ts-node": "~7.0.0",
 		"tsickle": ">=0.34.0",
 		"tslib": "^1.9.0",

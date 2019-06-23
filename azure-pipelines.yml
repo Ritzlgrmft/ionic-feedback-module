@@ -59,28 +59,28 @@ steps:
     verbose: false
     customCommand: 'run build'
 
-- task: DeleteFiles@1
-  displayName: 'delete e2e test results'
-  inputs:
-    SourceFolder: e2e/junit
-    Contents: 'TESTS*.xml'
+# - task: DeleteFiles@1
+#   displayName: 'delete e2e test results'
+#   inputs:
+#     SourceFolder: e2e/junit
+#     Contents: 'TESTS*.xml'
 
-- task: Npm@1
-  displayName: 'npm run test-e2e'
-  condition: succeededOrFailed()
-  inputs:
-    command: custom
-    verbose: false
-    customCommand: 'run test-e2e'
+# - task: Npm@1
+#   displayName: 'npm run test-e2e'
+#   condition: succeededOrFailed()
+#   inputs:
+#     command: custom
+#     verbose: false
+#     customCommand: 'run test-e2e'
 
-- task: PublishTestResults@2
-  displayName: 'publish e2e test results'
-  condition: succeededOrFailed()
-  inputs:
-    searchFolder: $(System.DefaultWorkingDirectory)/e2e/junit
-    testRunTitle: E2E Tests
-    testResultsFormat: JUnit
-    testResultsFiles: "**/junit*.xml"
+# - task: PublishTestResults@2
+#   displayName: 'publish e2e test results'
+#   condition: succeededOrFailed()
+#   inputs:
+#     searchFolder: $(System.DefaultWorkingDirectory)/e2e/junit
+#     testRunTitle: E2E Tests
+#     testResultsFormat: JUnit
+#     testResultsFiles: "**/junit*.xml"
 
 - task: Npm@1
   displayName: 'npm run lint'

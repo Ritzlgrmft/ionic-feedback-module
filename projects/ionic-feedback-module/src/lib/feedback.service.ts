@@ -3,7 +3,6 @@ import { EventEmitter, Injectable } from "@angular/core";
 
 import { Device } from "@ionic-native/device/ngx";
 import { Shake } from "@ionic-native/shake/ngx";
-import { ModalController, Platform } from "@ionic/angular";
 
 import { Logger, LoggingService, LogMessage } from "ionic-logging-service";
 
@@ -25,8 +24,6 @@ export class FeedbackService {
 
 	constructor(
 		private httpClient: HttpClient,
-		private platform: Platform,
-		private modalController: ModalController,
 		private shake: Shake,
 		loggingService: LoggingService,
 	) {

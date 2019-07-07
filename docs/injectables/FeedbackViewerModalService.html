@@ -59,7 +59,13 @@
             <code>src/lib/feedback-viewer-modal.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Helper class which makes the usage of the FeedbackViewerModalComponent more comfortable.</p>
 
+            </p>
 
 
             <section>
@@ -113,7 +119,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(platform: Platform, modalController: ModalController, appVersion: AppVersion, device: Device, screenshot: Screenshot, loggingService: LoggingService, feedbackService: <a href="../injectables/FeedbackService.html">FeedbackService</a>)</code>
+<code>constructor(modalController: ModalController, appVersion: AppVersion, device: Device, screenshot: Screenshot, loggingService: LoggingService, feedbackService: <a href="../injectables/FeedbackService.html">FeedbackService</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -124,6 +130,8 @@
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Creates a new instance of the service.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -135,18 +143,6 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                                <tr>
-                                                        <td>platform</td>
-                                                  
-                                                        <td>
-                                                                    <code>Platform</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
                                                 <tr>
                                                         <td>modalController</td>
                                                   
@@ -211,7 +207,7 @@
                                                         <td>feedbackService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/FeedbackService.html" target="_self" >FeedbackService</a></code>
+                                                                    <code><a href="../injectables/FeedbackService.html" target="_self" >FeedbackService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -230,220 +226,220 @@
 
             <section>
     
-    <h3 id="methods">
-        Methods
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="openModal"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            <span class="modifier">Async</span>
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openModal"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
                             openModal
-                        </b>
-                        <a href="#openModal"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>openModal(language?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, translation?: <a href="../interfaces/FeedbackViewerTranslation.html">FeedbackViewerTranslation</a>, categories?: string[], name?: string | undefined, email?: string | undefined, attachScreenshot?: <a href="../undefineds/AttachmentState.html">AttachmentState | string</a>, attachDeviceInfo?: <a href="../undefineds/AttachmentState.html">AttachmentState | string</a>, attachAppInfo?: <a href="../undefineds/AttachmentState.html">AttachmentState | string</a>, attachLogMessages?: <a href="../undefineds/AttachmentState.html">AttachmentState | string</a>)</code>
-                </td>
-            </tr>
+                            </b>
+                            <a href="#openModal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>openModal(language?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, translation?: <a href="../interfaces/FeedbackViewerTranslation.html">FeedbackViewerTranslation</a>, categories?: string[], name?: string | undefined, email?: string | undefined, attachScreenshot?: <a href="../undefineds/AttachmentState.html">AttachmentState | string</a>, attachDeviceInfo?: <a href="../undefineds/AttachmentState.html">AttachmentState | string</a>, attachAppInfo?: <a href="../undefineds/AttachmentState.html">AttachmentState | string</a>, attachLogMessages?: <a href="../undefineds/AttachmentState.html">AttachmentState | string</a>)</code>
+                    </td>
+                </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="65"
-                            class="link-to-prism">src/lib/feedback-viewer-modal.service.ts:65</a></div>
-                </td>
-            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/lib/feedback-viewer-modal.service.ts:67</a></div>
+                            </td>
+                        </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Opens the modal.</p>
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Opens the modal.</p>
 </div>
 
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>language</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>language</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
 
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                    <td>
-                                        <p>language used for the modal. Currently the languages en and de are supported.
+                                                        <td>
+                                                                <p>language used for the modal. Currently the languages en and de are supported.
 If the given language is unknown or undefined, the given translation is used.</p>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>translation</td>
-                                    <td>
-                                                <code><a href="../interfaces/FeedbackViewerTranslation.html" target="_self" >FeedbackViewerTranslation</a></code>
-                                    </td>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>translation</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/FeedbackViewerTranslation.html" target="_self" >FeedbackViewerTranslation</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
 
-                                    <td>
-                                        Yes
-                                    </td>
+                                                        <td>
+                                                                <p>translation for the labels in the modal.</p>
 
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>categories</td>
+                                                        <td>
+                                                                    <code>string[]</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
 
-                                    <td>
-                                        <p>translation for the labels in the modal.</p>
+                                                        <td>
+                                                                <p>optional categories of the feedback.</p>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>categories</td>
-                                    <td>
-                                            <code>string[]</code>
-                                    </td>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>name</td>
+                                                        <td>
+                                                                    <code>string | undefined</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
 
-                                    <td>
-                                        Yes
-                                    </td>
+                                                        <td>
+                                                                <p>name of the contact.</p>
 
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>email</td>
+                                                        <td>
+                                                                    <code>string | undefined</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
 
-                                    <td>
-                                        <p>optional categories of the feedback.</p>
+                                                        <td>
+                                                                <p>email address.</p>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>name</td>
-                                    <td>
-                                            <code>string | undefined</code>
-                                    </td>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>attachScreenshot</td>
+                                                        <td>
+                                                                    <code><a href="../miscellaneous/enumerations.html#AttachmentState" target="_self" >AttachmentState | string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
 
-                                    <td>
-                                        Yes
-                                    </td>
+                                                        <td>
+                                                                <p>if true, a shot of the current screen will be attached.</p>
 
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>attachDeviceInfo</td>
+                                                        <td>
+                                                                    <code><a href="../miscellaneous/enumerations.html#AttachmentState" target="_self" >AttachmentState | string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
 
-                                    <td>
-                                        <p>name of the contact.</p>
+                                                        <td>
+                                                                <p>if true, the device info will be attached.</p>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>email</td>
-                                    <td>
-                                            <code>string | undefined</code>
-                                    </td>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>attachAppInfo</td>
+                                                        <td>
+                                                                    <code><a href="../miscellaneous/enumerations.html#AttachmentState" target="_self" >AttachmentState | string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
 
-                                    <td>
-                                        Yes
-                                    </td>
+                                                        <td>
+                                                                <p>if true, the app info will be attached.</p>
 
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>attachLogMessages</td>
+                                                        <td>
+                                                                    <code><a href="../miscellaneous/enumerations.html#AttachmentState" target="_self" >AttachmentState | string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
 
-                                    <td>
-                                        <p>email address.</p>
+                                                        <td>
+                                                                <p>shall the last log messages be attached.</p>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>attachScreenshot</td>
-                                    <td>
-                                                <code><a href="../miscellaneous/enumerations.html#AttachmentState" target="_self" >AttachmentState | string</a></code>
-                                    </td>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
 
-                                    <td>
-                                        Yes
-                                    </td>
+                            </div>
+                                <div class="io-description">
+                                    <p>Promise which gets resolved as soon as the modal is shown.</p>
 
-
-                                    <td>
-                                        <p>if true, a shot of the current screen will be attached.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>attachDeviceInfo</td>
-                                    <td>
-                                                <code><a href="../miscellaneous/enumerations.html#AttachmentState" target="_self" >AttachmentState | string</a></code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                    <td>
-                                        <p>if true, the device info will be attached.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>attachAppInfo</td>
-                                    <td>
-                                                <code><a href="../miscellaneous/enumerations.html#AttachmentState" target="_self" >AttachmentState | string</a></code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                    <td>
-                                        <p>if true, the app info will be attached.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>attachLogMessages</td>
-                                    <td>
-                                                <code><a href="../miscellaneous/enumerations.html#AttachmentState" target="_self" >AttachmentState | string</a></code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                    <td>
-                                        <p>shall the last log messages be attached.</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>Promise which gets resolved as soon as the modal is shown.</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 </section>
+
             <section>
     
         <h3 id="inputs">
@@ -493,19 +489,19 @@ If the given language is unknown or undefined, the given translation is used.</p
 import { AppVersion } from &quot;@ionic-native/app-version/ngx&quot;;
 import { Device } from &quot;@ionic-native/device/ngx&quot;;
 import { Screenshot } from &quot;@ionic-native/screenshot/ngx&quot;;
-import { ModalController, Platform } from &quot;@ionic/angular&quot;;
+import { ModalController } from &quot;@ionic/angular&quot;;
 
 import { Logger, LoggingService, LogMessage } from &quot;ionic-logging-service&quot;;
 
-import { lang } from &quot;moment&quot;;
 import { AppInfo } from &quot;./app-info.model&quot;;
 import { AttachmentState } from &quot;./attachment-state.model&quot;;
-import { FeedbackConfiguration } from &quot;./feedback-configuration.model&quot;;
-import { FeedbackContact } from &quot;./feedback-contact.model&quot;;
 import { FeedbackViewerModalComponent } from &quot;./feedback-viewer-modal/feedback-viewer-modal.component&quot;;
 import { FeedbackViewerTranslation } from &quot;./feedback-viewer-translation.model&quot;;
 import { FeedbackService } from &quot;./feedback.service&quot;;
 
+/**
+ * Helper class which makes the usage of the FeedbackViewerModalComponent more comfortable.
+ */
 @Injectable({
 	providedIn: &quot;root&quot;,
 })
@@ -520,8 +516,10 @@ export class FeedbackViewerModalService {
 
 	private modalIsOpen: boolean;
 
+	/**
+	 * Creates a new instance of the service.
+	 */
 	constructor(
-		private platform: Platform,
 		private modalController: ModalController,
 		private appVersion: AppVersion,
 		private device: Device,
@@ -565,8 +563,7 @@ export class FeedbackViewerModalService {
 	): Promise&lt;void&gt; {
 
 		// check for default values
-		const configuration &#x3D; this.feedbackService.configuration;
-		const contact &#x3D; this.feedbackService.contact;
+		const { configuration, contact } &#x3D; this.feedbackService.getConfiguration();
 		if (!language) {
 			language &#x3D; configuration.language;
 		}

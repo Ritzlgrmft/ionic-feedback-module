@@ -4,6 +4,7 @@ import { Device } from "@ionic-native/device/ngx";
 import { AlertController, LoadingController, ModalController, NavParams, Platform } from "@ionic/angular";
 
 import * as moment_ from "moment";
+/** @ignore */
 const moment = moment_;
 
 import { Logger, LoggingService, LogMessage } from "ionic-logging-service";
@@ -13,6 +14,9 @@ import { AttachmentState } from "../attachment-state.model";
 import { FeedbackViewerTranslation } from "../feedback-viewer-translation.model";
 import { FeedbackService } from "../feedback.service";
 
+/**
+ * Modal for collecting all feedback info before it gets sent.
+ */
 @Component({
 	selector: "ionic-feedback-viewer-modal",
 	templateUrl: "./feedback-viewer-modal.component.html",
@@ -20,24 +24,81 @@ import { FeedbackService } from "../feedback.service";
 })
 export class FeedbackViewerModalComponent implements OnInit {
 
+	/**
+	 * Timestamp in ISO format.
+	 */
 	public timestamp: string;
+	/**
+	 * Flag controlling if categories are shown.
+	 */
 	public showCategories: boolean;
+	/**
+	 * Category.
+	 */
 	public category: string;
+	/**
+	 * Possible categories.
+	 */
 	public categories: string[];
+	/**
+	 * Message.
+	 */
 	public message: string;
+	/**
+	 * Name of the user.
+	 */
 	public name: string;
+	/**
+	 * Email of the user.
+	 */
 	public email: string;
+	/**
+	 * Flag controlling if screenshot is shown.
+	 */
 	public showScreenshot: boolean;
+	/**
+	 * Flag controlling if screenshot gets included.
+	 */
 	public includeScreenshot: boolean;
+	/**
+	 * Screenshot base64 encoded.
+	 */
 	public screenshot: string;
+	/**
+	 * Flag controlling if device info is shown.
+	 */
 	public showDeviceInfo: boolean;
+	/**
+	 * Flag controlling if device info gets included.
+	 */
 	public includeDeviceInfo: boolean;
+	/**
+	 * Device info.
+	 */
 	public deviceInfo: Device;
+	/**
+	 * Flag controlling if app info is shown.
+	 */
 	public showAppInfo: boolean;
+	/**
+	 * Flag controlling if app info gets included.
+	 */
 	public includeAppInfo: boolean;
+	/**
+	 * App info.
+	 */
 	public appInfo: AppInfo;
+	/**
+	 * Flag controlling if log messages are shown.
+	 */
 	public showLogMessages: boolean;
+	/**
+	 * Flag controlling if log messages gets included.
+	 */
 	public includeLogMessages: boolean;
+	/**
+	 * Log messages.
+	 */
 	public logMessages: LogMessage[];
 
 	/**
@@ -45,6 +106,9 @@ export class FeedbackViewerModalComponent implements OnInit {
 	 */
 	public isAndroid: boolean;
 
+	/**
+	 * Flag controlling if the send button is enabled.
+	 */
 	public get sendDisabled(): boolean {
 		return typeof this.message === "undefined" || this.message.length === 0;
 	}
@@ -65,8 +129,11 @@ export class FeedbackViewerModalComponent implements OnInit {
 
 	private translations: { [language: string]: FeedbackViewerTranslation; };
 
+	/**
+	 * Constructs the component.
+	 */
 	constructor(
-		private injector: Injector, // !?!
+		private injector: Injector,
 		navParams: NavParams,
 		platform: Platform,
 		private alertController: AlertController,
@@ -212,6 +279,9 @@ export class FeedbackViewerModalComponent implements OnInit {
 		this.logger.exit(methodName);
 	}
 
+	/**
+	 * Sends the feedback.
+	 */
 	public async onSend(): Promise<void> {
 		const methodName = "onSend";
 		this.logger.entry(methodName);

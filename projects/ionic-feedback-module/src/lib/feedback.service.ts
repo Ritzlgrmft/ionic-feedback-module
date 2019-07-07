@@ -11,17 +11,27 @@ import { AttachmentState } from "./attachment-state.model";
 import { FeedbackConfiguration } from "./feedback-configuration.model";
 import { FeedbackContact } from "./feedback-contact.model";
 
+/**
+ * Service providing all the functionality needed for handling shake events.
+ */
 @Injectable({
 	providedIn: "root",
 })
 export class FeedbackService {
 
+	/**
+	 * Event which gets emitted when the device gets shaken.
+	 */
 	public shaken: EventEmitter<void>;
-	public configuration: FeedbackConfiguration;
-	public contact: FeedbackContact;
+
+	private configuration: FeedbackConfiguration;
+	private contact: FeedbackContact;
 
 	private logger: Logger;
 
+	/**
+	 * Creates a new instance of the service.
+	 */
 	constructor(
 		private httpClient: HttpClient,
 		private shake: Shake,
@@ -40,7 +50,11 @@ export class FeedbackService {
 		this.logger.exit(methodName);
 	}
 
-	public async startWatchForShake(): Promise<void> {
+	/**
+	 * Start watching for shake events.
+	 * When the device gets shaken, the onShaken event is triggered.
+	 */
+	public startWatchForShake(): void {
 		const methodName = "startWatchForShake";
 		this.logger.entry(methodName);
 
@@ -58,6 +72,19 @@ export class FeedbackService {
 		this.logger.exit(methodName);
 	}
 
+	/**
+	 * Sends feedback to the configured backend.
+	 *
+	 * @param timestamp timestamp of the shake, in ISO format.
+	 * @param category category of the feedback, one of the configured categories
+	 * @param message message the user entered
+	 * @param name name of the user
+	 * @param email email of the user
+	 * @param screenshot base64 encoded screenshot
+	 * @param deviceInfo info of the device
+	 * @param appInfo info of the app
+	 * @param logMessages the last loig messages
+	 */
 	public async sendFeedback(
 		timestamp: string, category: string, message: string, name: string,
 		email: string, screenshot: string | undefined, deviceInfo: Device | undefined, appInfo: AppInfo | undefined,
@@ -126,6 +153,23 @@ export class FeedbackService {
 		this.contact = {};
 
 		this.logger.exit(methodName);
+	}
+
+	/**
+	 * Retrieve the current configuration.
+	 * For internal use only.
+	 */
+	public getConfiguration(): { configuration: FeedbackConfiguration, contact: FeedbackContact } {
+		const methodName = "getConfiguration";
+		this.logger.entry(methodName);
+
+		const result = {
+			configuration: this.configuration,
+			contact: this.contact
+		};
+
+		this.logger.exit(methodName, result);
+		return result;
 	}
 
 	private async onShaken(): Promise<void> {

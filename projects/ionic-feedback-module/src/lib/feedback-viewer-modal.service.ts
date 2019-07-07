@@ -13,6 +13,9 @@ import { FeedbackViewerModalComponent } from "./feedback-viewer-modal/feedback-v
 import { FeedbackViewerTranslation } from "./feedback-viewer-translation.model";
 import { FeedbackService } from "./feedback.service";
 
+/**
+ * Helper class which makes the usage of the FeedbackViewerModalComponent more comfortable.
+ */
 @Injectable({
 	providedIn: "root",
 })
@@ -27,6 +30,9 @@ export class FeedbackViewerModalService {
 
 	private modalIsOpen: boolean;
 
+	/**
+	 * Creates a new instance of the service.
+	 */
 	constructor(
 		private modalController: ModalController,
 		private appVersion: AppVersion,
@@ -71,8 +77,7 @@ export class FeedbackViewerModalService {
 	): Promise<void> {
 
 		// check for default values
-		const configuration = this.feedbackService.configuration;
-		const contact = this.feedbackService.contact;
+		const { configuration, contact } = this.feedbackService.getConfiguration();
 		if (!language) {
 			language = configuration.language;
 		}

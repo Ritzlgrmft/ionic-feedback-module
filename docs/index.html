@@ -30,7 +30,118 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<p>!?!</p>
+<h1 id="ionic-feedback-module">ionic-feedback-module</h1>
+<p><strong>The dependencies used by the latest version are the same as needed for <a href="https://github.com/ionic-team/ionic/blob/master/CHANGELOG.md">Ionic 4.0.0</a>. For older versions use:</strong></p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>ionic-feedback-module</th>
+<th>Ionic</th>
+<th>Angular</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.0.0</td>
+<td>&gt;= 4.0.0</td>
+<td>^7.0.0</td>
+</tr>
+<tr>
+<td>4.0.0</td>
+<td>&gt;= 3.9.0</td>
+<td>^5.0.0</td>
+</tr>
+<tr>
+<td>3.0.0</td>
+<td>&gt;= 3.0.0</td>
+<td>^4.0.0</td>
+</tr>
+</tbody>
+</table>
+<p>The module is thought as an easy to integrate solution for sending feedback. Typically, the user shakes her device, a popup opens, the user can enter what went wrong, and finally the report is sent, including some additional information like screenshot, logs, app and device info.</p>
+<p>The report is sent to a web service, which can do anything with the data, e.g. forward by mail to the
+developer, store it in a database, ...</p>
+<p>A sample app using this module is <a href="https://github.com/Ritzlgrmft/ionic-feedback-sample">ionic-feedback-sample</a>.</p>
+<p>A sample backend web service is <a href="https://github.com/Ritzlgrmft/ionic-feedback-backend">ionic-feedback-backend</a>.</p>
+<h2 id="usage">Usage</h2>
+<h3 id="npm-package">npm package</h3>
+<div><pre class="line-numbers"><code class="language-bash">npm install ionic-feedback-module --save</code></pre></div><h3 id="cordova-plugins">Cordova plugins</h3>
+<p>Additionally, you will need some Cordova plugins:</p>
+<ul>
+<li><a href="https://github.com/gitawego/cordova-screenshot">Screenshot</a></li>
+<li><a href="https://github.com/whiteoctober/cordova-plugin-app-version">AppVersion</a></li>
+<li><a href="https://github.com/apache/cordova-plugin-device">Device</a></li>
+<li><a href="https://github.com/leecrossley/cordova-plugin-shake">Shake</a></li>
+</ul>
+<h3 id="import-module">import module</h3>
+<p>In your <code>app.module.ts</code>, you have to import the module:</p>
+<div><pre class="line-numbers"><code class="language-typescript">import { FeedbackModule } from &quot;ionic-feedback-module&quot;;
+
+&#64;NgModule({
+  ...
+  imports: [
+    FeedbackModule,
+    ...
+  ],</code></pre></div><h3 id="registering-for-shake-events">registering for Shake events</h3>
+<p>In your <code>app.component.ts</code>, you have to inject 2 components into your constructor:</p>
+<ul>
+<li><code>FeedbackService</code>: processes the shake</li>
+<li><code>FeedbackViewerModalService</code>: shows a modal in case of a shake event</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-typescript">import { FeedbackService, FeedbackViewerModalService } from &quot;ionic-feedback-module&quot;;
+
+constructor(
+  platform: Platform,
+  feedbackService: FeedbackService,
+  private feedbackViewerModalService: FeedbackViewerModalService) {
+
+  platform.ready().then(() =&gt; {
+    feedbackService.shaken.subscribe(() =&gt; {
+      this.feedbackViewerModalService.openModal();
+    });
+    feedbackService.startWatchForShake();
+  });
+}</code></pre></div><h3 id="configuration">Configuration</h3>
+<p>It is recommended to place the configuration in <code>environment.ts</code>:</p>
+<div><pre class="line-numbers"><code class="language-typescript">export const environment = {
+  feedback: {
+    ...
+  }
+}</code></pre></div><p>Just call `configure&#39; before regisstering for shake events:</p>
+<div><pre class="line-numbers"><code class="language-typescript">feedbackService.configure(environment.feedback);</code></pre></div><p>Its structure is defined in the interface <code>FeedbackConfiguration</code>:</p>
+<ul>
+<li><code>isEnabled</code>: the <code>shaken</code> event is fired only if this is set to true</li>
+<li><code>appKey</code>: app key used for authorization with the backend (see below)</li>
+<li><code>appSecret</code>: app secret used for authorization with the backend (see below)</li>
+<li><code>url</code>: url of the backend (see below)</li>
+<li><code>language</code>: language used for the modal; see &quot;multi language support&quot;</li>
+<li><code>translation</code>: custom language used for the modal; see &quot;multi language support&quot;</li>
+<li><code>categories</code>: array of categories shown in the modal; could be something like <code>error</code>, <code>improvement</code>, <code>smile</code>, <code>frown</code>, ...</li>
+<li><code>attachScreenshot</code>: specifies, if a screenshot should be attached; valid values are <code>Yes</code>, <code>No</code> and <code>Ask</code> (ask the user if she wants to include it)
+this requires the <a href="https://github.com/gitawego/cordova-screenshot">Screenshot</a> plugin</li>
+<li><code>attachDeviceInfo</code>: specifies, if device info should be attached; valid values are <code>Yes</code>, <code>No</code> and <code>Ask</code> (ask the user if she wants to include it)
+this requires the <a href="https://github.com/apache/cordova-plugin-device">Device</a> plugin</li>
+<li><code>attachAppInfo</code>: specifies, if app info should be attached; valid values are <code>Yes</code>, <code>No</code> and <code>Ask</code> (ask the user if she wants to include it)
+this requires the <a href="https://github.com/whiteoctober/cordova-plugin-app-version">AppVersion</a> plugin</li>
+<li><code>attachLogMessages</code>: specifies, if log messages should be attached; valid values are <code>Yes</code>, <code>No</code> and <code>Ask</code> (ask the user if she wants to include it)</li>
+</ul>
+<h3 id="backend">Backend</h3>
+<p>For the backend, you need a service which can process the message with all provided infos.
+As a reference implementation, you can use <a href="https://github.com/Ritzlgrmft/ionic-feedback-backend">ionic-feedback-backend</a>. This implementation is also deployed
+to <a href="https://ionic-feedback-backend.azurewebsites.net">Azure</a>. There is also the Swagger documentation
+of the service available.</p>
+<p>If you want, you can also use this implementation for your app. But in this case, you need to register
+your app. As a result of the registration you will get your own <code>AppKey</code> and <code>AppSecret</code>. Every feedback
+will be sent by mail to an email address you specified.</p>
+<p>So, if you are still interested in using this backend, just drop me a note.</p>
+<h3 id="multi-language-support">multi language support</h3>
+<p>With <code>language</code> parameter in the configuration, you can
+use to select the language. Currently <code>en</code> and <code>de</code> are supported.</p>
+<p>If you need another language, either open an issue, or just use the <code>translation</code> configuration.
+This parameter you can use to pass your completely own texts.
+Just fill the <code>FeedbackViewerTranslation</code> object.</p>
+<h2 id="api">API</h2>
+<p>see <a href="https://ritzlgrmft.github.io/ionic-feedback-module/index.html">API documentation</a>.</p>
 
 
 

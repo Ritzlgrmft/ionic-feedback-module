@@ -1,0 +1,20 @@
+{
+	"$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+	"dest": "../../dist/ionic-feedback-module",
+	"lib": {
+		"entryFile": "src/public-api.ts",
+		"umdModuleIds": {
+			"ionic-logging-service": "ionicLoggingService",
+			"@ionic/angular": "ionicAngular",
+			"moment": "moment",
+			"@ionic-native/app-version/ngx": "ionicNativeAppVersion",
+			"@ionic-native/app-version/ngx/index": "ionicNativeAppVersionIndex",
+			"@ionic-native/device/ngx": "ionicNativeDevice",
+			"@ionic-native/device/ngx/index": "ionicNativeDeviceIndex",
+			"@ionic-native/screenshot/ngx": "ionicNativeScreenshot",
+			"@ionic-native/screenshot/ngx/index": "ionicNativeScreenshotIndex",
+			"@ionic-native/shake/ngx": "ionicNativeShake",
+			"@ionic-native/shake/ngx/index": "ionicNativeShakeIndex"
+		}
+	}
+}

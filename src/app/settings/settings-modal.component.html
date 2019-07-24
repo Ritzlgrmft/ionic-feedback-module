@@ -1,0 +1,218 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-title>Settings</ion-title>
+		<ion-buttons slot="start">
+			<ion-button *ngIf="!isAndroid" (click)="onClose()">
+				Cancel
+			</ion-button>
+			<ion-button *ngIf="isAndroid" icon-only (click)="onClose()">
+				<ion-icon name="md-close"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+		<ion-buttons slot="end">
+			<ion-button (click)="onSave()">
+				Save
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-card>
+		<ion-card-header>
+			<ion-item>
+				Language
+			</ion-item>
+		</ion-card-header>
+		<ion-list>
+			<ion-radio-group>
+				<ion-item *ngFor="let language of languages">
+					<ion-label>{{language}}</ion-label>
+					<ion-radio checked="{{language === selectedLanguage}}" value="{{language}}"
+						(ionSelect)="changeLanguage(language)"></ion-radio>
+				</ion-item>
+			</ion-radio-group>
+		</ion-list>
+	</ion-card>
+
+	<ion-card *ngIf="selectedLanguage === 'custom'">
+		<ion-card-header>
+			<ion-item>
+				Translation
+			</ion-item>
+		</ion-card-header>
+		<ion-item>
+			<ion-label position="fixed">cancel</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.cancel"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">email</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.email"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">errorSending</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.errorSending"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">includeAppInfo</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.includeAppInfo"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">includeDeviceInfo</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.includeDeviceInfo"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">includeLogMessages</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.includeLogMessages"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">includeScreenshot</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.includeScreenshot"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">message</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.message"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">name</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.name"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">ok</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.ok"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">send</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.send"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">title</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.title"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">manufacturer</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.manufacturer"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">model</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.model"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">uuid</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.uuid"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">serial</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.serial"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">platform</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.platform"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">version</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.version"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">cordova</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.cordova"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">isVirtual</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.isVirtual"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">appName</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.appName"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">packageName</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.packageName"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">versionCode</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.versionCode"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="fixed">versionNumber</ion-label>
+			<ion-input type="text" [(ngModel)]="translation.versionNumber"></ion-input>
+		</ion-item>
+	</ion-card>
+
+	<ion-card>
+		<ion-card-header color="primary">
+			<ion-item>
+				Categories
+				<ion-button icon-only slot="end" fill="clear" (click)="addCategory()">
+					<ion-icon name="add-circle-outline" slot="icon-only"></ion-icon>
+				</ion-button>
+			</ion-item>
+		</ion-card-header>
+		<ion-list>
+			<ion-item *ngFor="let category of categories; let i = index">
+				<ion-input type="text" [(ngModel)]="categories[i]"></ion-input>
+				<ion-button icon-only slot="end" fill="clear" (click)="deleteCategory(category)">
+					<ion-icon name="trash" slot="icon-only"></ion-icon>
+				</ion-button>
+			</ion-item>
+		</ion-list>
+	</ion-card>
+
+	<ion-card>
+		<ion-card-header>
+			<ion-item>
+				Contact
+			</ion-item>
+		</ion-card-header>
+		<ion-list>
+			<ion-item>
+				<ion-label position="fixed">Name</ion-label>
+				<ion-input type="text" [(ngModel)]="name"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="fixed">Email</ion-label>
+				<ion-input type="email" [(ngModel)]="email"></ion-input>
+			</ion-item>
+		</ion-list>
+	</ion-card>
+
+	<ion-card>
+		<ion-card-header>
+			<ion-item>
+				Options
+			</ion-item>
+		</ion-card-header>
+		<ion-list>
+			<ion-item>
+				<ion-label>Attach Screenshot</ion-label>
+				<ion-select [(ngModel)]="attachScreenshot" interface="popover">
+					<ion-select-option *ngFor="let state of attachmentStates" [value]="state.value">{{state.text}}
+					</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item>
+				<ion-label>Attach Device Info</ion-label>
+				<ion-select [(ngModel)]="attachDeviceInfo" interface="popover">
+					<ion-select-option *ngFor="let state of attachmentStates" [value]="state.value">{{state.text}}
+					</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item>
+				<ion-label>Attach App Info</ion-label>
+				<ion-select [(ngModel)]="attachAppInfo" interface="popover">
+					<ion-select-option *ngFor="let state of attachmentStates" [value]="state.value">{{state.text}}
+					</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item>
+				<ion-label>Attach Log Messages</ion-label>
+				<ion-select [(ngModel)]="attachLogMessages" interface="popover">
+					<ion-select-option *ngFor="let state of attachmentStates" [value]="state.value">{{state.text}}
+					</ion-select-option>
+				</ion-select>
+			</ion-item>
+		</ion-list>
+	</ion-card>
+
+</ion-content>

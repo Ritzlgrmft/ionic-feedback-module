@@ -1,56 +1,31 @@
 {
-	"rulesDirectory": [
-		"node_modules/codelyzer"
+	"extends": [
+		"tslint-angular"
 	],
-	"extends": "tslint:latest",
 	"rules": {
 		"indent": [
 			true,
 			"tabs"
 		],
-		"interface-name": [
+		"quotemark": [
 			true,
-			"never-prefix"
-		],
-		"whitespace": [
-			true,
-			"check-branch",
-			"check-decl",
-			"check-operator",
-			"check-separator",
-			"check-type"
-		],
-		"import-blacklist": [
-			true,
-			"rxjs"
-		],
-		"no-submodule-imports": [
-			true,
-			"@angular/common",
-			"rxjs"
+			"double"
 		],
 		"directive-selector": [
 			true,
 			"attribute",
-			"ionic",
+			"app",
 			"camelCase"
 		],
 		"component-selector": [
 			true,
 			"element",
-			"ionic",
+			"app",
 			"kebab-case"
 		],
-		"use-input-property-decorator": true,
-		"use-output-property-decorator": true,
-		"use-host-property-decorator": true,
-		"no-attribute-parameter-decorator": true,
-		"no-input-rename": true,
-		"no-output-rename": true,
-		"no-forward-ref": true,
-		"use-life-cycle-interface": true,
-		"use-pipe-transform-interface": true,
-		"component-class-suffix": true,
-		"directive-class-suffix": true
+		"component-class-suffix": [
+			true,
+			"Component"
+		]
 	}
 }

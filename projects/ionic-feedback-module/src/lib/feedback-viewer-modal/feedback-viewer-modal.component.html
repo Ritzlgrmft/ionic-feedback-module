@@ -1,0 +1,145 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-title>{{ getTranslation().title }}</ion-title>
+		<ion-buttons slot="start">
+			<ion-button *ngIf="!isAndroid" (click)="onClose()">
+				{{ getTranslation().cancel }}
+			</ion-button>
+			<ion-button *ngIf="isAndroid" icon-only (click)="onClose()">
+				<ion-icon name="md-close"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+		<ion-buttons slot="end">
+			<ion-button (click)="onSend()" [disabled]="sendDisabled">
+				{{ getTranslation().send }}
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+
+	<ion-list>
+		<ion-item *ngIf="showCategories">
+			<ion-select [(ngModel)]="category" interface="popover">
+				<ion-select-option *ngFor="let c of categories" [value]="c">{{c}}</ion-select-option>
+			</ion-select>
+		</ion-item>
+
+		<ion-item>
+			<ion-textarea rows="6" placeholder="{{ getTranslation().message }}" [(ngModel)]="message"></ion-textarea>
+		</ion-item>
+
+		<ion-item>
+			<ion-input type="text" placeholder="{{ getTranslation().name }}" [(ngModel)]="name"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-input type="email" placeholder="{{ getTranslation().email }}" [(ngModel)]="email"></ion-input>
+		</ion-item>
+	</ion-list>
+
+	<ion-card *ngIf="showScreenshot">
+		<ion-card-header>
+			<ion-item>
+				<ion-label>{{ getTranslation().includeScreenshot }}</ion-label>
+				<ion-checkbox [(ngModel)]="includeScreenshot"></ion-checkbox>
+			</ion-item>
+		</ion-card-header>
+		<ion-list *ngIf="includeScreenshot">
+			<ion-item>
+				<img class="screenshot" [src]="screenshot" />
+			</ion-item>
+		</ion-list>
+	</ion-card>
+
+	<ion-card *ngIf="showDeviceInfo">
+		<ion-card-header>
+			<ion-item>
+				<ion-label>{{ getTranslation().includeDeviceInfo }}</ion-label>
+				<ion-checkbox [(ngModel)]="includeDeviceInfo"></ion-checkbox>
+			</ion-item>
+		</ion-card-header>
+		<ion-list *ngIf="includeDeviceInfo">
+			<ion-item>
+				<ion-label slot="start">{{ getTranslation().manufacturer }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.manufacturer}}</div>
+			</ion-item>
+			<ion-item>
+				<ion-label slot="start">{{ getTranslation().model }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.model}}</div>
+			</ion-item>
+			<ion-item>
+				<ion-label slot="start">{{ getTranslation().uuid }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.uuid}}</div>
+			</ion-item>
+			<ion-item>
+				<ion-label slot="start">{{ getTranslation().serial }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.serial}}</div>
+			</ion-item>
+			<ion-item>
+				<ion-label slot="start">{{ getTranslation().platform }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.platform}}</div>
+			</ion-item>
+			<ion-item>
+				<ion-label slot="start">{{ getTranslation().version }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.version}}</div>
+			</ion-item>
+			<ion-item>
+				<ion-label slot="start">{{ getTranslation().cordova }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.cordova}}</div>
+			</ion-item>
+			<ion-item>
+				<ion-label slot="start">{{ getTranslation().isVirtual }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.isVirtual}}</div>
+			</ion-item>
+		</ion-list>
+	</ion-card>
+
+	<ion-card *ngIf="showAppInfo">
+		<ion-card-header>
+			<ion-item>
+				<ion-label>{{ getTranslation().includeAppInfo }}</ion-label>
+				<ion-checkbox [(ngModel)]="includeAppInfo"></ion-checkbox>
+			</ion-item>
+		</ion-card-header>
+		<ion-list *ngIf="includeAppInfo">
+			<ion-item>
+				<ion-label slot="start">{{ getTranslation().appName }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{appInfo.appName}}</div>
+			</ion-item>
+			<ion-item>
+				<ion-label slot="start">{{ getTranslation().packageName }}</ion-label>
+				<div slot="end" text-wrap text-right class="break-all">{{appInfo.packageName}}</div>
+			</ion-item>
+			<ion-item>
+				<ion-label slot="start">{{ getTranslation().versionCode }}</ion-label>
+				<div slot="end">{{appInfo.versionCode}}</div>
+			</ion-item>
+			<ion-item>
+				<ion-label slot="start">{{ getTranslation().versionNumber }}</ion-label>
+				<div slot="end">{{appInfo.versionNumber}}</div>
+			</ion-item>
+		</ion-list>
+	</ion-card>
+
+	<ion-card *ngIf="showLogMessages">
+		<ion-card-header>
+			<ion-item>
+				<ion-label>{{ getTranslation().includeLogMessages }}</ion-label>
+				<ion-checkbox slot="end" [(ngModel)]="includeLogMessages"></ion-checkbox>
+			</ion-item>
+		</ion-card-header>
+		<ion-list *ngIf="includeLogMessages">
+			<ion-item *ngFor="let logMessage of logMessages">
+				<ion-label text-wrap>
+					<div>{{logMessage.timeStamp | date: 'dd.MM.yyyy HH:mm:ss'}} {{logMessage.level}}</div>
+					<div>{{logMessage.logger}}</div>
+					<div>
+						{{logMessage.methodName}}
+						<span *ngFor="let messagePart of logMessage.message">{{messagePart}} </span>
+					</div>
+				</ion-label>
+			</ion-item>
+		</ion-list>
+	</ion-card>
+
+</ion-content>

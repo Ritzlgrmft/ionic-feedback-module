@@ -1,0 +1,11 @@
+ion-select {
+    padding-left: 0;
+}
+
+ion-card-header {
+    padding: 0;
+}
+
+.break-all {
+    word-break: break-all;
+}

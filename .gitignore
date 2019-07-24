@@ -1,13 +1,6 @@
-aot/
 coverage/
-dist/**/*.d.ts
-dist/**/*.js
-dist/**/*.map
-dist/**/*.metadata.json
-dist/**/*.scss
+dist/
 node_modules/
-src/**/*.ngfactory.ts
-package/
-
 *.tgz
-npm-debug.log
+junit/
+.vscode/typings

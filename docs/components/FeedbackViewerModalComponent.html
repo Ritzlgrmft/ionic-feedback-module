@@ -1,0 +1,1955 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ionic-feedback-module</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ionic-feedback-module</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>FeedbackViewerModalComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Modal for collecting all feedback info before it gets sent.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ionic-feedback-viewer-modal</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./feedback-viewer-modal.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./feedback-viewer-modal.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#appInfo">appInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#categories">categories</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#category">category</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#deviceInfo">deviceInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#email">email</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#includeAppInfo">includeAppInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#includeDeviceInfo">includeDeviceInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#includeLogMessages">includeLogMessages</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#includeScreenshot">includeScreenshot</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isAndroid">isAndroid</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#logMessages">logMessages</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#message">message</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#name">name</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#screenshot">screenshot</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showAppInfo">showAppInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showCategories">showCategories</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showDeviceInfo">showDeviceInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showLogMessages">showLogMessages</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showScreenshot">showScreenshot</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#timestamp">timestamp</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getTranslation">getTranslation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ionViewDidEnter">ionViewDidEnter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onClose">onClose</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#onSend">onSend</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#sendDisabled">sendDisabled</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(injector: <a href="https://angular.io/api/core/Injector" target="_blank">Injector</a>, navParams: NavParams, platform: Platform, alertController: AlertController, loadingController: LoadingController, modalController: ModalController, loggingService: LoggingService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:130</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructs the component.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>injector</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/Injector" target="_blank" >Injector</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navParams</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavParams</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>platform</td>
+                                                  
+                                                        <td>
+                                                                    <code>Platform</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertController</td>
+                                                  
+                                                        <td>
+                                                                    <code>AlertController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>loadingController</td>
+                                                  
+                                                        <td>
+                                                                    <code>LoadingController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalController</td>
+                                                  
+                                                        <td>
+                                                                    <code>ModalController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>loggingService</td>
+                                                  
+                                                        <td>
+                                                                    <code>LoggingService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getTranslation"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getTranslation
+                            </b>
+                            <a href="#getTranslation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getTranslation()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="326" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:326</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Helper method returning the current translation:</p>
+<ul>
+<li>the property translation if defined</li>
+<li>the translation according property language if valid</li>
+<li>English translation, otherwise</li>
+</ul>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/FeedbackViewerTranslation.html" target="_self" >FeedbackViewerTranslation</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ionViewDidEnter"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ionViewDidEnter
+                            </b>
+                            <a href="#ionViewDidEnter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ionViewDidEnter()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="263" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:263</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Eventhandler called by Ionic when the modal is opened.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="193" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:193</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Initializes the FeedbackViewerModalComponent.
+It configures the supported translations.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onClose"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            onClose
+                            </b>
+                            <a href="#onClose"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onClose()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="273" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:273</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Eventhandler called when the cancel button is clicked.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onSend"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            onSend
+                            </b>
+                            <a href="#onSend"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onSend()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="285" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:285</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Sends the feedback.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="appInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            appInfo</b>
+                            <a href="#appInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/AppInfo.html" target="_self" >AppInfo</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:90</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>App info.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="categories"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            categories</b>
+                            <a href="#categories"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Possible categories.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="category"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            category</b>
+                            <a href="#category"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Category.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deviceInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            deviceInfo</b>
+                            <a href="#deviceInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Device</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:78</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Device info.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="email"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            email</b>
+                            <a href="#email"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:54</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Email of the user.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="includeAppInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            includeAppInfo</b>
+                            <a href="#includeAppInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:86</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag controlling if app info gets included.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="includeDeviceInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            includeDeviceInfo</b>
+                            <a href="#includeDeviceInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:74</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag controlling if device info gets included.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="includeLogMessages"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            includeLogMessages</b>
+                            <a href="#includeLogMessages"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:98</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag controlling if log messages gets included.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="includeScreenshot"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            includeScreenshot</b>
+                            <a href="#includeScreenshot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:62</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag controlling if screenshot gets included.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isAndroid"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            isAndroid</b>
+                            <a href="#isAndroid"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:107</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag controlling which close button will be shown.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="logMessages"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            logMessages</b>
+                            <a href="#logMessages"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>LogMessage[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:102</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Log messages.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="message"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            message</b>
+                            <a href="#message"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Message.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="name"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            name</b>
+                            <a href="#name"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Name of the user.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="screenshot"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            screenshot</b>
+                            <a href="#screenshot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:66</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Screenshot base64 encoded.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showAppInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            showAppInfo</b>
+                            <a href="#showAppInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:82</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag controlling if app info is shown.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showCategories"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            showCategories</b>
+                            <a href="#showCategories"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag controlling if categories are shown.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showDeviceInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            showDeviceInfo</b>
+                            <a href="#showDeviceInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:70</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag controlling if device info is shown.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showLogMessages"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            showLogMessages</b>
+                            <a href="#showLogMessages"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:94</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag controlling if log messages are shown.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showScreenshot"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            showScreenshot</b>
+                            <a href="#showScreenshot"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Flag controlling if screenshot is shown.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="timestamp"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            timestamp</b>
+                            <a href="#timestamp"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Timestamp in ISO format.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sendDisabled"></a>
+                        <span class="name"><b>sendDisabled</b><a href="#sendDisabled"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>sendDisabled()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/lib/feedback-viewer-modal/feedback-viewer-modal.component.ts:112</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Flag controlling if the send button is enabled.</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Injector, OnInit } from &quot;@angular/core&quot;;
+
+import { Device } from &quot;@ionic-native/device/ngx&quot;;
+import { AlertController, LoadingController, ModalController, NavParams, Platform } from &quot;@ionic/angular&quot;;
+
+import * as moment_ from &quot;moment&quot;;
+/** @ignore */
+const moment &#x3D; moment_;
+
+import { Logger, LoggingService, LogMessage } from &quot;ionic-logging-service&quot;;
+
+import { AppInfo } from &quot;../app-info.model&quot;;
+import { AttachmentState } from &quot;../attachment-state.model&quot;;
+import { FeedbackViewerTranslation } from &quot;../feedback-viewer-translation.model&quot;;
+import { FeedbackService } from &quot;../feedback.service&quot;;
+
+/**
+ * Modal for collecting all feedback info before it gets sent.
+ */
+@Component({
+	selector: &quot;ionic-feedback-viewer-modal&quot;,
+	templateUrl: &quot;./feedback-viewer-modal.component.html&quot;,
+	styleUrls: [&quot;./feedback-viewer-modal.component.css&quot;],
+})
+export class FeedbackViewerModalComponent implements OnInit {
+
+	/**
+	 * Timestamp in ISO format.
+	 */
+	public timestamp: string;
+	/**
+	 * Flag controlling if categories are shown.
+	 */
+	public showCategories: boolean;
+	/**
+	 * Category.
+	 */
+	public category: string;
+	/**
+	 * Possible categories.
+	 */
+	public categories: string[];
+	/**
+	 * Message.
+	 */
+	public message: string;
+	/**
+	 * Name of the user.
+	 */
+	public name: string;
+	/**
+	 * Email of the user.
+	 */
+	public email: string;
+	/**
+	 * Flag controlling if screenshot is shown.
+	 */
+	public showScreenshot: boolean;
+	/**
+	 * Flag controlling if screenshot gets included.
+	 */
+	public includeScreenshot: boolean;
+	/**
+	 * Screenshot base64 encoded.
+	 */
+	public screenshot: string;
+	/**
+	 * Flag controlling if device info is shown.
+	 */
+	public showDeviceInfo: boolean;
+	/**
+	 * Flag controlling if device info gets included.
+	 */
+	public includeDeviceInfo: boolean;
+	/**
+	 * Device info.
+	 */
+	public deviceInfo: Device;
+	/**
+	 * Flag controlling if app info is shown.
+	 */
+	public showAppInfo: boolean;
+	/**
+	 * Flag controlling if app info gets included.
+	 */
+	public includeAppInfo: boolean;
+	/**
+	 * App info.
+	 */
+	public appInfo: AppInfo;
+	/**
+	 * Flag controlling if log messages are shown.
+	 */
+	public showLogMessages: boolean;
+	/**
+	 * Flag controlling if log messages gets included.
+	 */
+	public includeLogMessages: boolean;
+	/**
+	 * Log messages.
+	 */
+	public logMessages: LogMessage[];
+
+	/**
+	 * Flag controlling which close button will be shown.
+	 */
+	public isAndroid: boolean;
+
+	/**
+	 * Flag controlling if the send button is enabled.
+	 */
+	public get sendDisabled(): boolean {
+		return typeof this.message &#x3D;&#x3D;&#x3D; &quot;undefined&quot; || this.message.length &#x3D;&#x3D;&#x3D; 0;
+	}
+
+	/**
+	 * Language to be used for the modal.
+	 * Currently supported: en, de
+	 */
+	private language: string;
+
+	/**
+	 * Translation to be used for the modal.
+	 * If specified, the language is ignored.
+	 */
+	private translation: FeedbackViewerTranslation;
+
+	private logger: Logger;
+
+	private translations: { [language: string]: FeedbackViewerTranslation; };
+
+	/**
+	 * Constructs the component.
+	 */
+	constructor(
+		private injector: Injector,
+		navParams: NavParams,
+		platform: Platform,
+		private alertController: AlertController,
+		private loadingController: LoadingController,
+		private modalController: ModalController,
+		loggingService: LoggingService,
+	) {
+
+		this.logger &#x3D; loggingService.getLogger(&quot;Ionic.Feedback.Viewer.Modal.Component&quot;);
+		const methodName &#x3D; &quot;ctor&quot;;
+		this.logger.entry(methodName);
+
+		this.categories &#x3D; navParams.get(&quot;categories&quot;);
+		if (Array.isArray(this.categories) &amp;&amp; this.categories.length &gt; 0) {
+			this.showCategories &#x3D; true;
+			this.category &#x3D; this.categories[0];
+		} else {
+			this.showCategories &#x3D; false;
+		}
+
+		this.screenshot &#x3D; navParams.get(&quot;screenshot&quot;);
+		const attachScreenshot: AttachmentState &#x3D; navParams.get(&quot;attachScreenshot&quot;);
+		this.includeScreenshot &#x3D; attachScreenshot &#x3D;&#x3D;&#x3D; AttachmentState.Yes || attachScreenshot &#x3D;&#x3D;&#x3D; AttachmentState.Ask;
+		this.showScreenshot &#x3D; attachScreenshot &#x3D;&#x3D;&#x3D; AttachmentState.Ask;
+
+		this.deviceInfo &#x3D; navParams.get(&quot;deviceInfo&quot;);
+		const attachDeviceInfo: AttachmentState &#x3D; navParams.get(&quot;attachDeviceInfo&quot;);
+		this.includeDeviceInfo &#x3D; attachDeviceInfo &#x3D;&#x3D;&#x3D; AttachmentState.Yes || attachDeviceInfo &#x3D;&#x3D;&#x3D; AttachmentState.Ask;
+		this.showDeviceInfo &#x3D; attachDeviceInfo &#x3D;&#x3D;&#x3D; AttachmentState.Ask;
+
+		this.appInfo &#x3D; navParams.get(&quot;appInfo&quot;);
+		const attachAppInfo: AttachmentState &#x3D; navParams.get(&quot;attachAppInfo&quot;);
+		this.includeAppInfo &#x3D; attachAppInfo &#x3D;&#x3D;&#x3D; AttachmentState.Yes || attachAppInfo &#x3D;&#x3D;&#x3D; AttachmentState.Ask;
+		this.showAppInfo &#x3D; attachAppInfo &#x3D;&#x3D;&#x3D; AttachmentState.Ask;
+
+		this.logMessages &#x3D; navParams.get(&quot;logMessages&quot;);
+		const attachLogMessages: AttachmentState &#x3D; navParams.get(&quot;attachLogMessages&quot;);
+		this.includeLogMessages &#x3D; attachLogMessages &#x3D;&#x3D;&#x3D; AttachmentState.Yes || attachLogMessages &#x3D;&#x3D;&#x3D; AttachmentState.Ask;
+		this.showLogMessages &#x3D; attachLogMessages &#x3D;&#x3D;&#x3D; AttachmentState.Ask;
+
+		this.timestamp &#x3D; moment().toISOString();
+		this.name &#x3D; navParams.get(&quot;name&quot;);
+		this.email &#x3D; navParams.get(&quot;email&quot;);
+
+		this.language &#x3D; navParams.get(&quot;language&quot;);
+		this.translation &#x3D; navParams.get(&quot;translation&quot;);
+
+		this.isAndroid &#x3D; platform.is(&quot;android&quot;);
+
+		this.logger.exit(methodName);
+	}
+
+	/**
+	 * Initializes the FeedbackViewerModalComponent.
+	 * It configures the supported translations.
+	 */
+	public ngOnInit(): void {
+		// prepare translations
+		this.translations &#x3D; {};
+		// tslint:disable-next-line:no-string-literal
+		this.translations[&quot;en&quot;] &#x3D; {
+			// tslint:disable:object-literal-sort-keys
+			cancel: &quot;Cancel&quot;,
+			email: &quot;Email&quot;,
+			errorSending: &quot;Could not send feedback&quot;,
+			includeAppInfo: &quot;Include App Info&quot;,
+			includeDeviceInfo: &quot;Include Device Info&quot;,
+			includeLogMessages: &quot;Include Log&quot;,
+			includeScreenshot: &quot;Include Screenshot&quot;,
+			message: &quot;Message&quot;,
+			name: &quot;Name&quot;,
+			ok: &quot;OK&quot;,
+			send: &quot;Send&quot;,
+			title: &quot;Feedback&quot;,
+
+			manufacturer: &quot;Manufacturer&quot;,
+			model: &quot;Model&quot;,
+			uuid: &quot;UUID&quot;,
+			serial: &quot;Serial&quot;,
+			platform: &quot;Platform&quot;,
+			version: &quot;Version&quot;,
+			cordova: &quot;Cordova&quot;,
+			isVirtual: &quot;IsVirtual&quot;,
+
+			appName: &quot;AppName&quot;,
+			packageName: &quot;PackageName&quot;,
+			versionCode: &quot;VersionCode&quot;,
+			versionNumber: &quot;VersionNumber&quot;,
+			// tslint:enable:object-literal-sort-keys
+		};
+		// tslint:disable-next-line:no-string-literal
+		this.translations[&quot;de&quot;] &#x3D; {
+			// tslint:disable:object-literal-sort-keys
+			cancel: &quot;Abbrechen&quot;,
+			email: &quot;Email&quot;,
+			errorSending: &quot;Feedback konnte nicht gesendet werden&quot;,
+			includeAppInfo: &quot;App Info einschließen&quot;,
+			includeDeviceInfo: &quot;Geräte Info einschließen&quot;,
+			includeLogMessages: &quot;Log einschließen&quot;,
+			includeScreenshot: &quot;Screenshot einschließen&quot;,
+			message: &quot;Nachricht&quot;,
+			name: &quot;Name&quot;,
+			ok: &quot;OK&quot;,
+			send: &quot;Senden&quot;,
+			title: &quot;Feedback&quot;,
+
+			manufacturer: &quot;Hersteller&quot;,
+			model: &quot;Modell&quot;,
+			uuid: &quot;UUID&quot;,
+			serial: &quot;Seriennummer&quot;,
+			platform: &quot;Plattform&quot;,
+			version: &quot;Version&quot;,
+			cordova: &quot;Cordova&quot;,
+			isVirtual: &quot;Virtuell&quot;,
+
+			appName: &quot;Appname&quot;,
+			packageName: &quot;Packetname&quot;,
+			versionCode: &quot;Versionscode&quot;,
+			versionNumber: &quot;Versionsnummer&quot;,
+			// tslint:enable:object-literal-sort-keys
+		};
+	}
+
+	/**
+	 * Eventhandler called by Ionic when the modal is opened.
+	 */
+	public ionViewDidEnter(): void {
+		const methodName &#x3D; &quot;ionViewDidEnter&quot;;
+		this.logger.entry(methodName);
+
+		this.logger.exit(methodName);
+	}
+
+	/**
+	 * Eventhandler called when the cancel button is clicked.
+	 */
+	public onClose(): void {
+		const methodName &#x3D; &quot;onClose&quot;;
+		this.logger.entry(methodName);
+
+		this.modalController.dismiss();
+
+		this.logger.exit(methodName);
+	}
+
+	/**
+	 * Sends the feedback.
+	 */
+	public async onSend(): Promise&lt;void&gt; {
+		const methodName &#x3D; &quot;onSend&quot;;
+		this.logger.entry(methodName);
+
+		const loading &#x3D; await this.loadingController.create();
+		try {
+			await loading.present();
+
+			const feedbackService &#x3D; this.injector.get(FeedbackService);
+			await feedbackService.sendFeedback(
+				this.timestamp,
+				this.category,
+				this.message,
+				this.name,
+				this.email,
+				this.includeScreenshot ? this.screenshot : undefined,
+				this.includeDeviceInfo ? this.deviceInfo : undefined,
+				this.includeAppInfo ? this.appInfo : undefined,
+				this.includeLogMessages ? this.logMessages : undefined,
+			);
+			await loading.dismiss();
+			this.modalController.dismiss();
+		} catch (e) {
+			await loading.dismiss();
+			const alert &#x3D; await this.alertController.create({
+				buttons: [this.getTranslation().ok],
+				header: this.getTranslation().title,
+				subHeader: this.getTranslation().errorSending,
+			});
+			await alert.present();
+		}
+
+		this.logger.exit(methodName);
+	}
+
+	/**
+	 * Helper method returning the current translation:
+	 * - the property translation if defined
+	 * - the translation according property language if valid
+	 * - English translation, otherwise
+	 */
+	public getTranslation(): FeedbackViewerTranslation {
+		if (typeof this.translation !&#x3D;&#x3D; &quot;undefined&quot;) {
+			return this.translation;
+		} else if (typeof this.language !&#x3D;&#x3D; &quot;undefined&quot; &amp;&amp; typeof this.translations[this.language] &#x3D;&#x3D;&#x3D; &quot;object&quot;) {
+			return this.translations[this.language];
+		} else {
+			// tslint:disable-next-line:no-string-literal
+			return this.translations[&quot;en&quot;];
+		}
+	}
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+	&lt;ion-toolbar color&#x3D;&quot;primary&quot;&gt;
+		&lt;ion-title&gt;{{ getTranslation().title }}&lt;/ion-title&gt;
+		&lt;ion-buttons slot&#x3D;&quot;start&quot;&gt;
+			&lt;ion-button *ngIf&#x3D;&quot;!isAndroid&quot; (click)&#x3D;&quot;onClose()&quot;&gt;
+				{{ getTranslation().cancel }}
+			&lt;/ion-button&gt;
+			&lt;ion-button *ngIf&#x3D;&quot;isAndroid&quot; icon-only (click)&#x3D;&quot;onClose()&quot;&gt;
+				&lt;ion-icon name&#x3D;&quot;md-close&quot;&gt;&lt;/ion-icon&gt;
+			&lt;/ion-button&gt;
+		&lt;/ion-buttons&gt;
+		&lt;ion-buttons slot&#x3D;&quot;end&quot;&gt;
+			&lt;ion-button (click)&#x3D;&quot;onSend()&quot; [disabled]&#x3D;&quot;sendDisabled&quot;&gt;
+				{{ getTranslation().send }}
+			&lt;/ion-button&gt;
+		&lt;/ion-buttons&gt;
+	&lt;/ion-toolbar&gt;
+&lt;/ion-header&gt;
+&lt;ion-content&gt;
+
+	&lt;ion-list&gt;
+		&lt;ion-item *ngIf&#x3D;&quot;showCategories&quot;&gt;
+			&lt;ion-select [(ngModel)]&#x3D;&quot;category&quot; interface&#x3D;&quot;popover&quot;&gt;
+				&lt;ion-select-option *ngFor&#x3D;&quot;let c of categories&quot; [value]&#x3D;&quot;c&quot;&gt;{{c}}&lt;/ion-select-option&gt;
+			&lt;/ion-select&gt;
+		&lt;/ion-item&gt;
+
+		&lt;ion-item&gt;
+			&lt;ion-textarea rows&#x3D;&quot;6&quot; placeholder&#x3D;&quot;{{ getTranslation().message }}&quot; [(ngModel)]&#x3D;&quot;message&quot;&gt;&lt;/ion-textarea&gt;
+		&lt;/ion-item&gt;
+
+		&lt;ion-item&gt;
+			&lt;ion-input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;{{ getTranslation().name }}&quot; [(ngModel)]&#x3D;&quot;name&quot;&gt;&lt;/ion-input&gt;
+		&lt;/ion-item&gt;
+		&lt;ion-item&gt;
+			&lt;ion-input type&#x3D;&quot;email&quot; placeholder&#x3D;&quot;{{ getTranslation().email }}&quot; [(ngModel)]&#x3D;&quot;email&quot;&gt;&lt;/ion-input&gt;
+		&lt;/ion-item&gt;
+	&lt;/ion-list&gt;
+
+	&lt;ion-card *ngIf&#x3D;&quot;showScreenshot&quot;&gt;
+		&lt;ion-card-header&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label&gt;{{ getTranslation().includeScreenshot }}&lt;/ion-label&gt;
+				&lt;ion-checkbox [(ngModel)]&#x3D;&quot;includeScreenshot&quot;&gt;&lt;/ion-checkbox&gt;
+			&lt;/ion-item&gt;
+		&lt;/ion-card-header&gt;
+		&lt;ion-list *ngIf&#x3D;&quot;includeScreenshot&quot;&gt;
+			&lt;ion-item&gt;
+				&lt;img class&#x3D;&quot;screenshot&quot; [src]&#x3D;&quot;screenshot&quot; /&gt;
+			&lt;/ion-item&gt;
+		&lt;/ion-list&gt;
+	&lt;/ion-card&gt;
+
+	&lt;ion-card *ngIf&#x3D;&quot;showDeviceInfo&quot;&gt;
+		&lt;ion-card-header&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label&gt;{{ getTranslation().includeDeviceInfo }}&lt;/ion-label&gt;
+				&lt;ion-checkbox [(ngModel)]&#x3D;&quot;includeDeviceInfo&quot;&gt;&lt;/ion-checkbox&gt;
+			&lt;/ion-item&gt;
+		&lt;/ion-card-header&gt;
+		&lt;ion-list *ngIf&#x3D;&quot;includeDeviceInfo&quot;&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label slot&#x3D;&quot;start&quot;&gt;{{ getTranslation().manufacturer }}&lt;/ion-label&gt;
+				&lt;div slot&#x3D;&quot;end&quot; text-wrap text-right class&#x3D;&quot;break-all&quot;&gt;{{deviceInfo.manufacturer}}&lt;/div&gt;
+			&lt;/ion-item&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label slot&#x3D;&quot;start&quot;&gt;{{ getTranslation().model }}&lt;/ion-label&gt;
+				&lt;div slot&#x3D;&quot;end&quot; text-wrap text-right class&#x3D;&quot;break-all&quot;&gt;{{deviceInfo.model}}&lt;/div&gt;
+			&lt;/ion-item&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label slot&#x3D;&quot;start&quot;&gt;{{ getTranslation().uuid }}&lt;/ion-label&gt;
+				&lt;div slot&#x3D;&quot;end&quot; text-wrap text-right class&#x3D;&quot;break-all&quot;&gt;{{deviceInfo.uuid}}&lt;/div&gt;
+			&lt;/ion-item&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label slot&#x3D;&quot;start&quot;&gt;{{ getTranslation().serial }}&lt;/ion-label&gt;
+				&lt;div slot&#x3D;&quot;end&quot; text-wrap text-right class&#x3D;&quot;break-all&quot;&gt;{{deviceInfo.serial}}&lt;/div&gt;
+			&lt;/ion-item&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label slot&#x3D;&quot;start&quot;&gt;{{ getTranslation().platform }}&lt;/ion-label&gt;
+				&lt;div slot&#x3D;&quot;end&quot; text-wrap text-right class&#x3D;&quot;break-all&quot;&gt;{{deviceInfo.platform}}&lt;/div&gt;
+			&lt;/ion-item&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label slot&#x3D;&quot;start&quot;&gt;{{ getTranslation().version }}&lt;/ion-label&gt;
+				&lt;div slot&#x3D;&quot;end&quot; text-wrap text-right class&#x3D;&quot;break-all&quot;&gt;{{deviceInfo.version}}&lt;/div&gt;
+			&lt;/ion-item&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label slot&#x3D;&quot;start&quot;&gt;{{ getTranslation().cordova }}&lt;/ion-label&gt;
+				&lt;div slot&#x3D;&quot;end&quot; text-wrap text-right class&#x3D;&quot;break-all&quot;&gt;{{deviceInfo.cordova}}&lt;/div&gt;
+			&lt;/ion-item&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label slot&#x3D;&quot;start&quot;&gt;{{ getTranslation().isVirtual }}&lt;/ion-label&gt;
+				&lt;div slot&#x3D;&quot;end&quot; text-wrap text-right class&#x3D;&quot;break-all&quot;&gt;{{deviceInfo.isVirtual}}&lt;/div&gt;
+			&lt;/ion-item&gt;
+		&lt;/ion-list&gt;
+	&lt;/ion-card&gt;
+
+	&lt;ion-card *ngIf&#x3D;&quot;showAppInfo&quot;&gt;
+		&lt;ion-card-header&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label&gt;{{ getTranslation().includeAppInfo }}&lt;/ion-label&gt;
+				&lt;ion-checkbox [(ngModel)]&#x3D;&quot;includeAppInfo&quot;&gt;&lt;/ion-checkbox&gt;
+			&lt;/ion-item&gt;
+		&lt;/ion-card-header&gt;
+		&lt;ion-list *ngIf&#x3D;&quot;includeAppInfo&quot;&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label slot&#x3D;&quot;start&quot;&gt;{{ getTranslation().appName }}&lt;/ion-label&gt;
+				&lt;div slot&#x3D;&quot;end&quot; text-wrap text-right class&#x3D;&quot;break-all&quot;&gt;{{appInfo.appName}}&lt;/div&gt;
+			&lt;/ion-item&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label slot&#x3D;&quot;start&quot;&gt;{{ getTranslation().packageName }}&lt;/ion-label&gt;
+				&lt;div slot&#x3D;&quot;end&quot; text-wrap text-right class&#x3D;&quot;break-all&quot;&gt;{{appInfo.packageName}}&lt;/div&gt;
+			&lt;/ion-item&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label slot&#x3D;&quot;start&quot;&gt;{{ getTranslation().versionCode }}&lt;/ion-label&gt;
+				&lt;div slot&#x3D;&quot;end&quot;&gt;{{appInfo.versionCode}}&lt;/div&gt;
+			&lt;/ion-item&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label slot&#x3D;&quot;start&quot;&gt;{{ getTranslation().versionNumber }}&lt;/ion-label&gt;
+				&lt;div slot&#x3D;&quot;end&quot;&gt;{{appInfo.versionNumber}}&lt;/div&gt;
+			&lt;/ion-item&gt;
+		&lt;/ion-list&gt;
+	&lt;/ion-card&gt;
+
+	&lt;ion-card *ngIf&#x3D;&quot;showLogMessages&quot;&gt;
+		&lt;ion-card-header&gt;
+			&lt;ion-item&gt;
+				&lt;ion-label&gt;{{ getTranslation().includeLogMessages }}&lt;/ion-label&gt;
+				&lt;ion-checkbox slot&#x3D;&quot;end&quot; [(ngModel)]&#x3D;&quot;includeLogMessages&quot;&gt;&lt;/ion-checkbox&gt;
+			&lt;/ion-item&gt;
+		&lt;/ion-card-header&gt;
+		&lt;ion-list *ngIf&#x3D;&quot;includeLogMessages&quot;&gt;
+			&lt;ion-item *ngFor&#x3D;&quot;let logMessage of logMessages&quot;&gt;
+				&lt;ion-label text-wrap&gt;
+					&lt;div&gt;{{logMessage.timeStamp | date: &#x27;dd.MM.yyyy HH:mm:ss&#x27;}} {{logMessage.level}}&lt;/div&gt;
+					&lt;div&gt;{{logMessage.logger}}&lt;/div&gt;
+					&lt;div&gt;
+						{{logMessage.methodName}}
+						&lt;span *ngFor&#x3D;&quot;let messagePart of logMessage.message&quot;&gt;{{messagePart}} &lt;/span&gt;
+					&lt;/div&gt;
+				&lt;/ion-label&gt;
+			&lt;/ion-item&gt;
+		&lt;/ion-list&gt;
+	&lt;/ion-card&gt;
+
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./feedback-viewer-modal.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">ion-select {
+    padding-left: 0;
+}
+
+ion-card-header {
+    padding: 0;
+}
+
+.break-all {
+    word-break: break-all;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>	<ion-toolbar color="primary">		<ion-title>{{ getTranslation().title }}</ion-title>		<ion-buttons slot="start">			<ion-button *ngIf="!isAndroid" (click)="onClose()">				{{ getTranslation().cancel }}			</ion-button>			<ion-button *ngIf="isAndroid" icon-only (click)="onClose()">				<ion-icon name="md-close"></ion-icon>			</ion-button>		</ion-buttons>		<ion-buttons slot="end">			<ion-button (click)="onSend()" [disabled]="sendDisabled">				{{ getTranslation().send }}			</ion-button>		</ion-buttons>	</ion-toolbar></ion-header><ion-content>	<ion-list>		<ion-item *ngIf="showCategories">			<ion-select [(ngModel)]="category" interface="popover">				<ion-select-option *ngFor="let c of categories" [value]="c">{{c}}</ion-select-option>			</ion-select>		</ion-item>		<ion-item>			<ion-textarea rows="6" placeholder="{{ getTranslation().message }}" [(ngModel)]="message"></ion-textarea>		</ion-item>		<ion-item>			<ion-input type="text" placeholder="{{ getTranslation().name }}" [(ngModel)]="name"></ion-input>		</ion-item>		<ion-item>			<ion-input type="email" placeholder="{{ getTranslation().email }}" [(ngModel)]="email"></ion-input>		</ion-item>	</ion-list>	<ion-card *ngIf="showScreenshot">		<ion-card-header>			<ion-item>				<ion-label>{{ getTranslation().includeScreenshot }}</ion-label>				<ion-checkbox [(ngModel)]="includeScreenshot"></ion-checkbox>			</ion-item>		</ion-card-header>		<ion-list *ngIf="includeScreenshot">			<ion-item>				<img class="screenshot" [src]="screenshot" />			</ion-item>		</ion-list>	</ion-card>	<ion-card *ngIf="showDeviceInfo">		<ion-card-header>			<ion-item>				<ion-label>{{ getTranslation().includeDeviceInfo }}</ion-label>				<ion-checkbox [(ngModel)]="includeDeviceInfo"></ion-checkbox>			</ion-item>		</ion-card-header>		<ion-list *ngIf="includeDeviceInfo">			<ion-item>				<ion-label slot="start">{{ getTranslation().manufacturer }}</ion-label>				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.manufacturer}}</div>			</ion-item>			<ion-item>				<ion-label slot="start">{{ getTranslation().model }}</ion-label>				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.model}}</div>			</ion-item>			<ion-item>				<ion-label slot="start">{{ getTranslation().uuid }}</ion-label>				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.uuid}}</div>			</ion-item>			<ion-item>				<ion-label slot="start">{{ getTranslation().serial }}</ion-label>				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.serial}}</div>			</ion-item>			<ion-item>				<ion-label slot="start">{{ getTranslation().platform }}</ion-label>				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.platform}}</div>			</ion-item>			<ion-item>				<ion-label slot="start">{{ getTranslation().version }}</ion-label>				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.version}}</div>			</ion-item>			<ion-item>				<ion-label slot="start">{{ getTranslation().cordova }}</ion-label>				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.cordova}}</div>			</ion-item>			<ion-item>				<ion-label slot="start">{{ getTranslation().isVirtual }}</ion-label>				<div slot="end" text-wrap text-right class="break-all">{{deviceInfo.isVirtual}}</div>			</ion-item>		</ion-list>	</ion-card>	<ion-card *ngIf="showAppInfo">		<ion-card-header>			<ion-item>				<ion-label>{{ getTranslation().includeAppInfo }}</ion-label>				<ion-checkbox [(ngModel)]="includeAppInfo"></ion-checkbox>			</ion-item>		</ion-card-header>		<ion-list *ngIf="includeAppInfo">			<ion-item>				<ion-label slot="start">{{ getTranslation().appName }}</ion-label>				<div slot="end" text-wrap text-right class="break-all">{{appInfo.appName}}</div>			</ion-item>			<ion-item>				<ion-label slot="start">{{ getTranslation().packageName }}</ion-label>				<div slot="end" text-wrap text-right class="break-all">{{appInfo.packageName}}</div>			</ion-item>			<ion-item>				<ion-label slot="start">{{ getTranslation().versionCode }}</ion-label>				<div slot="end">{{appInfo.versionCode}}</div>			</ion-item>			<ion-item>				<ion-label slot="start">{{ getTranslation().versionNumber }}</ion-label>				<div slot="end">{{appInfo.versionNumber}}</div>			</ion-item>		</ion-list>	</ion-card>	<ion-card *ngIf="showLogMessages">		<ion-card-header>			<ion-item>				<ion-label>{{ getTranslation().includeLogMessages }}</ion-label>				<ion-checkbox slot="end" [(ngModel)]="includeLogMessages"></ion-checkbox>			</ion-item>		</ion-card-header>		<ion-list *ngIf="includeLogMessages">			<ion-item *ngFor="let logMessage of logMessages">				<ion-label text-wrap>					<div>{{logMessage.timeStamp | date: \'dd.MM.yyyy HH:mm:ss\'}} {{logMessage.level}}</div>					<div>{{logMessage.logger}}</div>					<div>						{{logMessage.methodName}}						<span *ngFor="let messagePart of logMessage.message">{{messagePart}} </span>					</div>				</ion-label>			</ion-item>		</ion-list>	</ion-card></ion-content></div>'
+    var COMPONENTS = [{'name': 'FeedbackViewerModalComponent', 'selector': 'ionic-feedback-viewer-modal'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'FeedbackViewerModalComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FeedbackViewerModalComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -102,5 +102,5 @@ steps:
   displayName: 'npm run semantic-release'
   inputs:
     command: custom
-    verbose: false
+    verbose: true
     customCommand: 'run semantic-release'

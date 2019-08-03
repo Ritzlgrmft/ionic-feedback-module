@@ -1,93 +1,93 @@
 {
-	"name": "ionic-feedback-module-app",
-	"version": "0.0.0-development",
-	"description": "Test app for ionic-feedback-module",
-	"author": {
-		"name": "Markus Wagner",
-		"email": "markus.wagner02@web.de"
-	},
-	"repository": "https://github.com/Ritzlgrmft/ionic-feedback-module.git",
-	"license": "MIT",
-	"private": false,
-	"keywords": [
-		"ionic",
-		"feedback"
-	],
-	"scripts": {
-		"build": "ng build ionic-feedback-module && cpx 'projects/ionic-feedback-module/README.md' dist/ionic-feedback-module --verbose",
-		"test": "npm run test-coverage && npm run test-compodoc && npm run lint && npm run test-e2e",
-		"test-coverage": "ng test ionic-feedback-module --code-coverage --watch false --browsers ChromeHeadless",
-		"test-compodoc": "cd projects/ionic-feedback-module && compodoc --coverageTest 100 && cd ../..",
-		"test-e2e": "ng e2e",
-		"test-watch": "ng test ionic-feedback-module --code-coverage",
-		"lint": "ng lint",
-		"e2e": "ng e2e",
-		"codecov": "codecov",
-		"compodoc": "cd projects/ionic-feedback-module && compodoc && cd ../..",
-		"semantic-release": "semantic-release"
-	},
-	"dependencies": {
-		"@angular/animations": "~7.2.0",
-		"@angular/common": "~7.2.0",
-		"@angular/compiler": "~7.2.0",
-		"@angular/core": "~7.2.0",
-		"@angular/forms": "~7.2.0",
-		"@angular/platform-browser": "~7.2.0",
-		"@angular/platform-browser-dynamic": "~7.2.0",
-		"@angular/router": "~7.2.0",
-		"@ionic/angular": "^4.0.0",
-		"@ionic-native/app-version": "^5.0.0",
-		"@ionic-native/core": "^5.0.0",
-		"@ionic-native/device": "^5.0.0",
-		"@ionic-native/screenshot": "^5.0.0",
-		"@ionic-native/shake": "^5.0.0",
-		"core-js": "^2.5.4",
-		"ionic-logging-service": "^7.0.0",
-		"ionicons": "^4.0.0",
-		"moment": "^2.0.0",
-		"rxjs": "~6.3.3",
-		"zone.js": "~0.8.26"
-	},
-	"devDependencies": {
-		"@angular-devkit/build-angular": "~0.13.0",
-		"@angular-devkit/build-ng-packagr": "~0.13.0",
-		"@angular/cli": "~7.3.0",
-		"@angular/compiler-cli": "~7.2.0",
-		"@angular/language-service": "~7.2.0",
-		"@compodoc/compodoc": "1.1.8",
-		"@ionic/angular-toolkit": "1.5.1",
-		"@types/node": "12.0.10",
-		"@types/jasmine": "~2.8.8",
-		"@types/jasminewd2": "~2.0.3",
-		"codecov": "3.5.0",
-		"codelyzer": "5.1.0",
-		"cpx": "1.5.0",
-		"jasmine-core": "~2.99.1",
-		"jasmine-reporters": "2.3.2",
-		"jasmine-spec-reporter": "~4.2.1",
-		"karma": "~3.1.1",
-		"karma-chrome-launcher": "~2.2.0",
-		"karma-coverage-istanbul-reporter": "~2.0.1",
-		"karma-jasmine": "~1.1.2",
-		"karma-jasmine-html-reporter": "^0.2.2",
-		"karma-junit-reporter": "1.2.0",
-		"ng-packagr": "^4.2.0",
-		"protractor": "5.4.2",
-		"puppeteer": "1.15.0",
-		"semantic-release": "15.13.16",
-		"ts-node": "~7.0.0",
-		"tsickle": ">=0.34.0",
-		"tslib": "^1.9.0",
-		"tslint": "5.18.0",
-		"tslint-angular": "3.0.2",
-		"typescript": "~3.2.2"
-	},
-	"config": {
-		"commitizen": {
-			"path": "cz-conventional-changelog"
-		}
-	},
-	"release": {
-		"pkgRoot": "dist/ionic-logging-viewer"
-	}
+  "name": "ionic-feedback-module-app",
+  "version": "0.0.0-development",
+  "description": "Test app for ionic-feedback-module",
+  "author": {
+    "name": "Markus Wagner",
+    "email": "markus.wagner02@web.de"
+  },
+  "repository": "https://github.com/Ritzlgrmft/ionic-feedback-module.git",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "ionic",
+    "feedback"
+  ],
+  "scripts": {
+    "build": "ng build ionic-feedback-module && cpx 'projects/ionic-feedback-module/README.md' dist/ionic-feedback-module --verbose",
+    "test": "npm run test-coverage && npm run test-compodoc && npm run lint && npm run test-e2e",
+    "test-coverage": "ng test ionic-feedback-module --code-coverage --watch false --browsers ChromeHeadless",
+    "test-compodoc": "cd projects/ionic-feedback-module && compodoc --coverageTest 100 && cd ../..",
+    "test-e2e": "ng e2e",
+    "test-watch": "ng test ionic-feedback-module --code-coverage",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "codecov": "codecov",
+    "compodoc": "cd projects/ionic-feedback-module && compodoc && cd ../..",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "@angular/animations": "~7.2.0",
+    "@angular/common": "~7.2.0",
+    "@angular/compiler": "~7.2.0",
+    "@angular/core": "~7.2.0",
+    "@angular/forms": "~7.2.0",
+    "@angular/platform-browser": "~7.2.0",
+    "@angular/platform-browser-dynamic": "~7.2.0",
+    "@angular/router": "~7.2.0",
+    "@ionic/angular": "^4.0.0",
+    "@ionic-native/app-version": "^5.0.0",
+    "@ionic-native/core": "^5.0.0",
+    "@ionic-native/device": "^5.0.0",
+    "@ionic-native/screenshot": "^5.0.0",
+    "@ionic-native/shake": "^5.0.0",
+    "core-js": "^2.5.4",
+    "ionic-logging-service": "^7.0.0",
+    "ionicons": "^4.0.0",
+    "moment": "^2.0.0",
+    "rxjs": "~6.3.3",
+    "zone.js": "~0.8.26"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.13.0",
+    "@angular-devkit/build-ng-packagr": "~0.13.0",
+    "@angular/cli": "~7.3.0",
+    "@angular/compiler-cli": "~7.2.0",
+    "@angular/language-service": "~7.2.0",
+    "@compodoc/compodoc": "1.1.8",
+    "@ionic/angular-toolkit": "1.5.1",
+    "@types/node": "12.0.10",
+    "@types/jasmine": "~2.8.8",
+    "@types/jasminewd2": "~2.0.3",
+    "codecov": "3.5.0",
+    "codelyzer": "5.1.0",
+    "cpx": "1.5.0",
+    "jasmine-core": "~2.99.1",
+    "jasmine-reporters": "2.3.2",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~3.1.1",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~1.1.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-junit-reporter": "1.2.0",
+    "ng-packagr": "^4.2.0",
+    "protractor": "5.4.2",
+    "puppeteer": "1.15.0",
+    "semantic-release": "^15.13.18",
+    "ts-node": "~7.0.0",
+    "tsickle": ">=0.34.0",
+    "tslib": "^1.9.0",
+    "tslint": "5.18.0",
+    "tslint-angular": "3.0.2",
+    "typescript": "~3.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "pkgRoot": "dist/ionic-feedback-module"
+  }
 }

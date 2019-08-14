@@ -1,5 +1,4 @@
 trigger:
-
 - master
 
 schedules:
@@ -12,11 +11,6 @@ schedules:
 
 pool:
   name: Hosted
-  
-steps:
-- task: CmdLine@2
-  inputs:
-    script: 'set'
     
 - task: NodeTool@0
   displayName: 'Use Node 11.x'

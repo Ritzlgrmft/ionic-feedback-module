@@ -1,14 +1,14 @@
 <ion-header>
 	<ion-toolbar color="medium">
 		<ion-title>
-			Ionic Feedback Module App
+			Feedback
 		</ion-title>
 	</ion-toolbar>
 </ion-header>
 
 <ion-content padding>
 
-	<div text-center class="shake-me">Rotate to simulate shaking</div>
+	<div text-center class="shake-me">{{ message }}</div>
 
 	<ion-button expand="block" (click)="openFeedback()">
 		<ion-icon slot="start" name="outlet"></ion-icon>

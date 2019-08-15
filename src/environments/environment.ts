@@ -1,6 +1,7 @@
 import { AttachmentState } from "ionic-feedback-module";
+import { Environment } from "./environment.model";
 
-export const environment = {
+export const environment: Environment = {
 	production: false,
 
 	logging: {
@@ -27,6 +28,7 @@ export const environment = {
 		attachLogMessages: AttachmentState.Ask,
 	},
 	mocks: {
+		useMocks: true,
 		appVersion: {
 			appName: "Ionic Feedback Module App",
 			packageName: "Ionic.Feedback.Module.App",
@@ -50,4 +52,5 @@ export const environment = {
 	},
 };
 
-import "zone.js/dist/zone-error";  // Included with Angular CLI.
+import "zone.js/dist/zone-error";  // Included with Angular CLI.import { Environment } from './environment.model';
+

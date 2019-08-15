@@ -1,6 +1,7 @@
 import { AttachmentState } from "ionic-feedback-module";
+import { Environment } from "./environment.model";
 
-export const environment = {
+export const environment: Environment = {
 	production: true,
 
 	logging: {
@@ -27,6 +28,7 @@ export const environment = {
 		attachLogMessages: AttachmentState.Ask,
 	},
 	mocks: {
+		useMocks: true,
 		appVersion: {
 			appName: "Ionic Feedback Module App",
 			packageName: "Ionic.Feedback.Module.App",

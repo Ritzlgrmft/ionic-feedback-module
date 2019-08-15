@@ -34,6 +34,8 @@ A test app for the `ionic-feedback-module` as well as a sample app.
 Useful commands:
 
 * `ionic serve --project ionic-feedback-module-app`
+* `ionic cordova platform add ios`  
+`ionic cordova emulate ios --target iPhone-X --livereload`
 
 ## ionic-feedback-module-app-e2e
 

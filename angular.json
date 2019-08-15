@@ -67,6 +67,30 @@
 									"maximumError": "5mb"
 								}
 							]
+						},
+						"cordova": {
+							"fileReplacements": [
+								{
+									"replace": "src/environments/environment.ts",
+									"with": "src/environments/environment.cordova.ts"
+								}
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"extractCss": true,
+							"namedChunks": false,
+							"aot": true,
+							"extractLicenses": true,
+							"vendorChunk": false,
+							"buildOptimizer": true,
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "2mb",
+									"maximumError": "5mb"
+								}
+							]
 						}
 					}
 				},
@@ -114,6 +138,37 @@
 						"exclude": [
 							"**/node_modules/**"
 						]
+					}
+				},
+				"ionic-cordova-build": {
+					"builder": "@ionic/angular-toolkit:cordova-build",
+					"options": {
+						"browserTarget": "ionic-feedback-module-app:build"
+					},
+					"configurations": {
+						"production": {
+							"browserTarget": "ionic-feedback-module-app:build:production"
+						},
+						"cordova": {
+							"browserTarget": "ionic-feedback-module-app:build:cordova"
+						}
+					}
+				},
+				"ionic-cordova-serve": {
+					"builder": "@ionic/angular-toolkit:cordova-serve",
+					"options": {
+						"cordovaBuildTarget": "ionic-feedback-module-app:ionic-cordova-build",
+						"devServerTarget": "ionic-feedback-module-app:serve"
+					},
+					"configurations": {
+						"production": {
+							"cordovaBuildTarget": "ionic-feedback-module-app:ionic-cordova-build:production",
+							"devServerTarget": "ionic-feedback-module-app:serve:production"
+						},
+						"cordova": {
+							"cordovaBuildTarget": "ionic-feedback-module-app:ionic-cordova-build:cordova",
+							"devServerTarget": "ionic-feedback-module-app:serve:cordova"
+						}
 					}
 				}
 			}

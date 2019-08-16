@@ -76,12 +76,18 @@ steps:
     verbose: false
     customCommand: 'run build-web'
 
-- task: Npm@1
+#- task: Npm@1
+#  displayName: 'npm run build app ios'
+#  inputs:
+#    command: custom
+#    verbose: false
+#    customCommand: 'run build-app-ios'
+
+- task: IonicCommand@1
   displayName: 'npm run build app ios'
   inputs:
-    command: custom
-    verbose: false
-    customCommand: 'run build-app-ios'
+    ionicCommand: 'cordova build ios'
+    ionicArgs: '--project ionic-feedback-module-app --configuration cordova'
 
 # - task: DeleteFiles@1
 #   displayName: 'delete e2e test results'

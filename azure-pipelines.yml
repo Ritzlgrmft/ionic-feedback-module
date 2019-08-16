@@ -12,6 +12,9 @@ schedules:
 pool:
   name: Hosted
     
+name: $(Date:yyyyMMdd).$(Rev:.r)
+
+steps:
 - task: NodeTool@0
   displayName: 'Use Node 11.x'
   inputs:

@@ -3,6 +3,7 @@ dist/
 node_modules/
 *.tgz
 junit/
+.vscode/plugins.json
 .vscode/typings
 platforms/
 plugins/

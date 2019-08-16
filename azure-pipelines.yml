@@ -63,6 +63,14 @@ steps:
     customCommand: 'run test-compodoc'
 
 - task: Npm@1
+  displayName: 'npm run lint'
+  condition: succeededOrFailed()
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run lint'
+
+- task: Npm@1
   displayName: 'npm run build module'
   inputs:
     command: custom
@@ -76,53 +84,42 @@ steps:
     verbose: false
     customCommand: 'run build-web'
 
-#- task: Npm@1
-#  displayName: 'npm run build app ios'
-#  inputs:
-#    command: custom
-#    verbose: false
-#    customCommand: 'run build-app-ios'
+- task: Bash@3
+  displayName: 'update ios-CFBundleVersion'
+  inputs:
+    targetType: 'inline'
+    script: 'node build/update_bundle_version.js $(Build.BuildId)'
+
+- task: InstallAppleCertificate@2
+  displayName: 'install development certificate'
+  inputs:
+    certSecureFile: 'ios_development.p12'
+    certPwd: '$(P12password)'
+    keychain: 'temp'
+
+- task: InstallAppleProvisioningProfile@1
+  displayName: 'install provisioning certificate'
+  inputs:
+    provisioningProfileLocation: 'secureFiles'
+    provProfileSecureFile: 'Feedback_Development.mobileprovision'
 
 - task: IonicCommand@1
-  displayName: 'npm run build app ios'
+  displayName: 'build app for ios'
   inputs:
     ionicCommand: 'cordova build ios'
-    ionicArgs: '--project ionic-feedback-module-app --configuration cordova'
-
-# - task: DeleteFiles@1
-#   displayName: 'delete e2e test results'
-#   inputs:
-#     SourceFolder: e2e/junit
-#     Contents: 'TESTS*.xml'
-
-# - task: Npm@1
-#   displayName: 'npm run test-e2e'
-#   condition: succeededOrFailed()
-#   inputs:
-#     command: custom
-#     verbose: false
-#     customCommand: 'run test-e2e'
-
-# - task: PublishTestResults@2
-#   displayName: 'publish e2e test results'
-#   condition: succeededOrFailed()
-#   inputs:
-#     searchFolder: $(System.DefaultWorkingDirectory)/e2e/junit
-#     testRunTitle: E2E Tests
-#     testResultsFormat: JUnit
-#     testResultsFiles: "**/junit*.xml"
+    ionicArgs: '--project ionic-feedback-module-app --configuration cordova --prod --release --device --verbose -- --verbose'
 
 - task: Npm@1
-  displayName: 'npm run lint'
-  condition: succeededOrFailed()
-  inputs:
-    command: custom
-    verbose: false
-    customCommand: 'run lint'
-
-- task: Npm@1
-  displayName: 'npm run semantic-release'
+  displayName: 'deploy module'
   inputs:
     command: custom
     verbose: true
     customCommand: 'run semantic-release'
+
+- task: Bash@3
+  displayName: 'copy app for ios to staging directory'
+  inputs:
+    targetType: 'inline'
+    script: |
+      cp -av platforms/ios/build/device/Feedback.ipa $(Build.ArtifactStagingDirectory)/app/ios
+      cp -av platforms/ios/build/device/Feedback.app.dSYM/ $(Build.ArtifactStagingDirectory)/app/ios/Feedback.app.dSYM

@@ -63,11 +63,25 @@ steps:
     customCommand: 'run test-compodoc'
 
 - task: Npm@1
-  displayName: 'npm run build'
+  displayName: 'npm run build module'
   inputs:
     command: custom
     verbose: false
-    customCommand: 'run build'
+    customCommand: 'run build-module'
+
+- task: Npm@1
+  displayName: 'npm run build web'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run build-web'
+
+- task: Npm@1
+  displayName: 'npm run build app ios'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run build-app-ios'
 
 # - task: DeleteFiles@1
 #   displayName: 'delete e2e test results'

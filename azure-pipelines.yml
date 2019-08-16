@@ -10,7 +10,7 @@ schedules:
   always: true
 
 pool:
-  name: Hosted
+  name: Hosted macOS
     
 name: $(Date:yyyyMMdd)$(Rev:.r)
 

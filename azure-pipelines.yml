@@ -12,7 +12,7 @@ schedules:
 pool:
   name: Hosted
     
-name: $(Date:yyyyMMdd).$(Rev:.r)
+name: $(Date:yyyyMMdd)$(Rev:.r)
 
 steps:
 - task: NodeTool@0

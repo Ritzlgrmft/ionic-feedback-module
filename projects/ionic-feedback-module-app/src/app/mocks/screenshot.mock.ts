@@ -1,5 +1,5 @@
 import { Screenshot } from "@ionic-native/screenshot/ngx";
-import { environment } from "src/environments/environment";
+import { environment } from "projects/ionic-feedback-module-app/src/environments/environment";
 
 export class ScreenshotMock extends Screenshot {
 

@@ -1,6 +1,6 @@
 import { Device } from "@ionic-native/device/ngx";
 
-import { environment } from "src/environments/environment";
+import { environment } from "projects/ionic-feedback-module-app/src/environments/environment";
 
 export class DeviceMock extends Device {
 	get cordova(): string {

@@ -11,7 +11,7 @@ import { IonicModule, IonicRouteStrategy } from "@ionic/angular";
 import { FeedbackModule } from "ionic-feedback-module";
 import { LoggingService, LoggingServiceModule } from "ionic-logging-service";
 
-import { environment } from "src/environments/environment";
+import { environment } from "projects/ionic-feedback-module-app/src/environments/environment";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { AppVersionMock } from "./mocks/app-version.mock";
@@ -19,8 +19,21 @@ import { DeviceMock } from "./mocks/device.mock";
 import { ScreenshotMock } from "./mocks/screenshot.mock";
 import { ShakeMock } from "./mocks/shake.mock";
 
+
 export function configureLogging(loggingService: LoggingService): () => void {
 	return () => loggingService.configure(environment.logging);
+}
+export function appVersionFactory(): AppVersion {
+	return environment.mocks.useMocks ? new AppVersionMock() : new AppVersion();
+}
+export function deviceFactory(): Device {
+	return environment.mocks.useMocks ? new DeviceMock() : new Device();
+}
+export function screenshotFactory(): Screenshot {
+	return environment.mocks.useMocks ? new ScreenshotMock() : new Screenshot();
+}
+export function shakeFactory(): Shake {
+	return environment.mocks.useMocks ? new ShakeMock() : new Shake();
 }
 
 @NgModule({
@@ -47,10 +60,10 @@ export function configureLogging(loggingService: LoggingService): () => void {
 			provide: APP_INITIALIZER,
 			useFactory: configureLogging,
 		},
-		{ provide: AppVersion, useClass: environment.mocks.useMocks ? AppVersionMock : AppVersion },
-		{ provide: Device, useClass: environment.mocks.useMocks ? DeviceMock : Device },
-		{ provide: Screenshot, useClass: environment.mocks.useMocks ? ScreenshotMock : Screenshot },
-		{ provide: Shake, useClass: environment.mocks.useMocks ? ShakeMock : Shake },
+		{ provide: AppVersion, useFactory: appVersionFactory },
+		{ provide: Device, useFactory: deviceFactory },
+		{ provide: Screenshot, useFactory: screenshotFactory },
+		{ provide: Shake, useFactory: shakeFactory },
 	],
 	bootstrap: [
 		AppComponent,

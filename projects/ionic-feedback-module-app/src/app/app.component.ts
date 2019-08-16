@@ -5,7 +5,7 @@ import { Platform } from "@ionic/angular";
 import { FeedbackService, FeedbackViewerModalService } from "ionic-feedback-module";
 import { Logger, LoggingService } from "ionic-logging-service";
 
-import { environment } from "src/environments/environment";
+import { environment } from "projects/ionic-feedback-module-app/src/environments/environment";
 
 @Component({
 	selector: "app-root",

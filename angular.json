@@ -4,8 +4,8 @@
 	"newProjectRoot": "projects",
 	"projects": {
 		"ionic-feedback-module-app": {
-			"root": "",
-			"sourceRoot": "src",
+			"root": "projects/ionic-feedback-module-app",
+			"sourceRoot": "projects/ionic-feedback-module-app/src",
 			"projectType": "application",
 			"prefix": "app",
 			"schematics": {},
@@ -14,13 +14,13 @@
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
 						"outputPath": "dist/ionic-feedback-module-app",
-						"index": "src/index.html",
-						"main": "src/main.ts",
-						"polyfills": "src/polyfills.ts",
-						"tsConfig": "src/tsconfig.app.json",
+						"index": "projects/ionic-feedback-module-app/src/index.html",
+						"main": "projects/ionic-feedback-module-app/src/main.ts",
+						"polyfills": "projects/ionic-feedback-module-app/src/polyfills.ts",
+						"tsConfig": "projects/ionic-feedback-module-app/tsconfig.app.json",
 						"assets": [
-							"src/favicon.ico",
-							"src/assets",
+							"projects/ionic-feedback-module-app/src/favicon.ico",
+							"projects/ionic-feedback-module-app/src/assets",
 							{
 								"glob": "**/*.svg",
 								"input": "node_modules/@ionic/angular/dist/ionic/svg",
@@ -34,10 +34,10 @@
 						],
 						"styles": [
 							{
-								"input": "src/theme/variables.scss"
+								"input": "projects/ionic-feedback-module-app/src/theme/variables.scss"
 							},
 							{
-								"input": "src/global.scss"
+								"input": "projects/ionic-feedback-module-app/src/global.scss"
 							}
 						],
 						"scripts": [],
@@ -47,8 +47,8 @@
 						"production": {
 							"fileReplacements": [
 								{
-									"replace": "src/environments/environment.ts",
-									"with": "src/environments/environment.prod.ts"
+									"replace": "projects/ionic-feedback-module-app/src/environments/environment.ts",
+									"with": "projects/ionic-feedback-module-app/src/environments/environment.prod.ts"
 								}
 							],
 							"optimization": true,
@@ -71,8 +71,8 @@
 						"cordova": {
 							"fileReplacements": [
 								{
-									"replace": "src/environments/environment.ts",
-									"with": "src/environments/environment.cordova.ts"
+									"replace": "projects/ionic-feedback-module-app/src/environments/environment.ts",
+									"with": "projects/ionic-feedback-module-app/src/environments/environment.cordova.ts"
 								}
 							],
 							"optimization": true,
@@ -114,17 +114,17 @@
 				"test": {
 					"builder": "@angular-devkit/build-angular:karma",
 					"options": {
-						"main": "src/test.ts",
-						"polyfills": "src/polyfills.ts",
-						"tsConfig": "src/tsconfig.spec.json",
-						"karmaConfig": "src/karma.conf.js",
+						"main": "projects/ionic-feedback-module-app/src/test.ts",
+						"polyfills": "projects/ionic-feedback-module-app/src/polyfills.ts",
+						"tsConfig": "projects/ionic-feedback-module-app/src/tsconfig.spec.json",
+						"karmaConfig": "projects/ionic-feedback-module-app/src/karma.conf.js",
 						"styles": [
-							"src/styles.sass"
+							"projects/ionic-feedback-module-app/src/styles.sass"
 						],
 						"scripts": [],
 						"assets": [
-							"src/favicon.ico",
-							"src/assets"
+							"projects/ionic-feedback-module-app/src/favicon.ico",
+							"projects/ionic-feedback-module-app/src/assets"
 						]
 					}
 				},
@@ -132,8 +132,8 @@
 					"builder": "@angular-devkit/build-angular:tslint",
 					"options": {
 						"tsConfig": [
-							"src/tsconfig.app.json",
-							"src/tsconfig.spec.json"
+							"projects/ionic-feedback-module-app/tsconfig.app.json",
+							"projects/ionic-feedback-module-app/tsconfig.spec.json"
 						],
 						"exclude": [
 							"**/node_modules/**"

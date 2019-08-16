@@ -1,6 +1,6 @@
 import { AppVersion } from "@ionic-native/app-version/ngx";
 
-import { environment } from "src/environments/environment";
+import { environment } from "projects/ionic-feedback-module-app/src/environments/environment";
 
 export class AppVersionMock extends AppVersion {
 

@@ -5,7 +5,7 @@ import { ModalController } from "@ionic/angular";
 import { FeedbackViewerModalService } from "ionic-feedback-module";
 import { Logger, LoggingService } from "ionic-logging-service";
 import { SettingsModalComponent } from "../settings/settings-modal.component";
-import { environment } from "src/environments/environment.cordova";
+import { environment } from "projects/ionic-feedback-module-app/src/environments/environment";
 
 @Component({
 	selector: "app-home",

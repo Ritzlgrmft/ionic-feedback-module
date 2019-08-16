@@ -21,10 +21,8 @@
 		"test": "npm run test-coverage && npm run test-compodoc && npm run lint && npm run test-e2e",
 		"test-coverage": "ng test ionic-feedback-module --code-coverage --watch false --browsers ChromeHeadless",
 		"test-compodoc": "cd projects/ionic-feedback-module && compodoc --coverageTest 100 && cd ../..",
-		"test-e2e": "ng e2e",
 		"test-watch": "ng test ionic-feedback-module --code-coverage",
 		"lint": "ng lint",
-		"e2e": "ng e2e",
 		"codecov": "codecov",
 		"compodoc": "cd projects/ionic-feedback-module && compodoc && cd ../..",
 		"semantic-release": "semantic-release"

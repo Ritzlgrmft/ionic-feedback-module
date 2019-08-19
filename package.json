@@ -89,7 +89,8 @@
 		"tslib": "^1.9.0",
 		"tslint": "5.18.0",
 		"tslint-angular": "3.0.2",
-		"typescript": "~3.2.2"
+		"typescript": "~3.2.2",
+		"xpath": "0.0.27"
 	},
 	"config": {
 		"commitizen": {

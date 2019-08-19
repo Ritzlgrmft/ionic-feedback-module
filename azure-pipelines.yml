@@ -121,5 +121,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      mkdir -p $(Build.ArtifactStagingDirectory)/app/ios
       cp -av platforms/ios/build/device/Feedback.ipa $(Build.ArtifactStagingDirectory)/app/ios
       cp -av platforms/ios/build/device/Feedback.app.dSYM/ $(Build.ArtifactStagingDirectory)/app/ios/Feedback.app.dSYM

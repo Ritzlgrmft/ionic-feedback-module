@@ -1,0 +1,13 @@
+{
+	"ios": {
+		"debug": {
+			"developmentTeam": "ZLR72EPB75"
+		},
+		"release": {
+			"codeSignIdentity": "iPhone Developer",
+			"developmentTeam": "ZLR72EPB75",
+			"provisioningProfile": "1c7d1cee-2d93-4ffa-95d9-53dbe79fdc47",
+			"packageType": "development"
+		}
+	}
+}

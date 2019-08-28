@@ -36,7 +36,9 @@ steps:
   displayName: 'show next version'
   inputs:
     targetType: 'inline'
-    script: 'echo $(nextVersion)'
+    script: |
+      env
+      echo $NEXTVERSION
 
 - task: DeleteFiles@1
   displayName: 'delete unit test results'

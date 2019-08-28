@@ -38,7 +38,7 @@ steps:
     targetType: 'inline'
     script: |
       env
-      echo $NEXTVERSION
+      echo $NEXTRELEASE
 
 - task: DeleteFiles@1
   displayName: 'delete unit test results'

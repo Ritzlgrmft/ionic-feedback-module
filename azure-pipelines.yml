@@ -40,6 +40,12 @@ steps:
       env
       echo $NEXTRELEASE
 
+- task: Bash@3
+  displayName: 'update ios-CFBundleVersion'
+  inputs:
+    targetType: 'inline'
+    script: 'node build/update_bundle_version.js $(nextRelease) $(Build.BuildId)'
+
 - task: DeleteFiles@1
   displayName: 'delete unit test results'
   inputs:
@@ -98,12 +104,6 @@ steps:
     command: custom
     verbose: false
     customCommand: 'run build-web'
-
-- task: Bash@3
-  displayName: 'update ios-CFBundleVersion'
-  inputs:
-    targetType: 'inline'
-    script: 'node build/update_bundle_version.js $(Build.BuildId)'
 
 - task: InstallAppleCertificate@2
   displayName: 'install development certificate'

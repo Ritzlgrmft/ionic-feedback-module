@@ -25,7 +25,8 @@
 		"lint": "ng lint",
 		"codecov": "codecov",
 		"compodoc": "cd projects/ionic-feedback-module && compodoc && cd ../..",
-		"semantic-release": "semantic-release"
+		"semantic-release": "semantic-release",
+		"semantic-release-version": "semantic-release -p semantic-release-ado"
 	},
 	"dependencies": {
 		"@angular/animations": "~7.2.0",
@@ -65,9 +66,9 @@
 		"@angular/language-service": "~7.2.0",
 		"@compodoc/compodoc": "1.1.8",
 		"@ionic/angular-toolkit": "1.5.1",
-		"@types/node": "12.0.10",
 		"@types/jasmine": "~2.8.8",
 		"@types/jasminewd2": "~2.0.3",
+		"@types/node": "12.0.10",
 		"codecov": "3.5.0",
 		"codelyzer": "5.1.0",
 		"cpx": "1.5.0",
@@ -83,7 +84,8 @@
 		"ng-packagr": "^4.2.0",
 		"protractor": "5.4.2",
 		"puppeteer": "1.15.0",
-		"semantic-release": "^15.13.18",
+		"semantic-release": "^15.13.24",
+		"semantic-release-ado": "git+https://github.com/Ritzlgrmft/semantic-release-ado.git",
 		"ts-node": "~7.0.0",
 		"tsickle": ">=0.34.0",
 		"tslib": "^1.9.0",

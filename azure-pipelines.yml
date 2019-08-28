@@ -25,6 +25,19 @@ steps:
   inputs:
     verbose: false
 
+- task: Npm@1
+  displayName: 'calculate next version'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run semantic-release-version'
+
+- task: Bash@3
+  displayName: 'show next version'
+  inputs:
+    targetType: 'inline'
+    script: 'echo $(nextVersion)'
+
 - task: DeleteFiles@1
   displayName: 'delete unit test results'
   inputs:

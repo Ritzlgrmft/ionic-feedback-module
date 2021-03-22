@@ -84,7 +84,7 @@
 		"ng-packagr": "^4.2.0",
 		"protractor": "5.4.2",
 		"puppeteer": "1.15.0",
-		"semantic-release": "^15.13.24",
+		"semantic-release": "^17.2.3",
 		"semantic-release-ado": "git+https://github.com/Ritzlgrmft/semantic-release-ado.git",
 		"ts-node": "~7.0.0",
 		"tsickle": ">=0.34.0",
